@@ -27,5 +27,19 @@ top = box.top + (box.height - side) // 2
 box._element.getparent().remove(box._element)
 pic = slide.shapes.add_picture('qr_folder.png', left, top, side, side)
 pic._element.nvPicPr.cNvPr.set('descr', 'QR code linking to the project folder: ' + url)
+
+# the same link as clickable text under the bullet list, for readers of the PDF
+from pptx.util import Pt
+from pptx.dml.color import RGBColor
+shown = url[:-4] if url.endswith('.git') else url
+tb = slide.shapes.add_textbox(Inches(1.39), Inches(4.75), Inches(5.6), Inches(0.5))
+tb.text_frame.word_wrap = True
+tb.text_frame.margin_left = 0
+r = tb.text_frame.paragraphs[0].add_run()
+r.text = shown.replace('https://', '')
+r.font.size = Pt(14)
+r.font.bold = True
+r.font.color.rgb = RGBColor(0xD9, 0x48, 0x0F)
+r.hyperlink.address = shown
 prs.save(OUT)
 print('saved', OUT)
