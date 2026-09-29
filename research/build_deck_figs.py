@@ -72,26 +72,6 @@ fig.text(0.055, 0.855, 'lower is better, mean of 3 metrics, 10 random draws', fo
 fig.text(0.055, 0.815, 'dashed line: noise floor of the 540-run reference', fontsize=10, color=MUTED)
 bad['h2h'] = save_card(fig, 'h2h')
 
-# --------------------------------------------------------------------- B2 cost
-fig = card_fig(W, H)
-ax = axes_in(fig, 0.40, 0.17, 0.53, 0.55)
-rows = [('this pipeline,\n30 real runs', 15, '15 hours', BRAND),
-        ('the 540 supplied\nruns', 270, '11 days', MUTED),
-        ('standard Monte Carlo\non the solver', 6656, '277 days', CHAR)]
-for i, (lab, hrs, txt, col) in enumerate(rows):
-    ax.barh(i, hrs, color=col, height=0.55, zorder=3)
-    ax.text(hrs * 1.25, i, txt, va='center', fontsize=12, fontweight='bold', color=col)
-ax.set_xscale('log'); ax.set_xlim(5, 90000); ax.set_ylim(-0.6, 2.6)
-ax.set_yticks(range(3)); ax.set_yticklabels([r[0] for r in rows], fontsize=10.5)
-ax.set_xticks([10, 100, 1000, 10000]); ax.set_xticklabels(['10 h', '100 h', '1,000 h', '10,000 h'])
-ax.minorticks_off(); ax.tick_params(axis='y', length=0)
-ax.spines[['top', 'right', 'left']].set_visible(False)
-ax.grid(axis='x', color=RULE, lw=0.9, zorder=0)
-fig.text(0.055, 0.925, 'Solver time needed', fontsize=13.5, fontweight='bold')
-fig.text(0.055, 0.855, 'at 30 minutes per simulation, run one after another', fontsize=10, color=MUTED)
-fig.text(0.055, 0.045, 'then 0.3 seconds of exact arithmetic gives the indices', fontsize=10, color=BRAND)
-bad['cost'] = save_card(fig, 'cost')
-
 
 # --------------------------------------------------- C conventional vs this pipeline
 def bars_card(name, rows, col, foot):
