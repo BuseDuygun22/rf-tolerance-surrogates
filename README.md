@@ -67,12 +67,12 @@ rf-tolerance-surrogates/
     ├── vis.py, deck_style.py     # figure checker (no overlap, colour-blind-safe palette)
     ├── build_deck_figs.py, build_deck_story.py, build_deck_drivers.py   # deck figures
     ├── build_submission.py, insert_qr.py       # submission deck and QR code
-    ├── Huawei_TechArena_Submission.pptx / .pdf # submission deck
+    ├── Huawei_TechArena_Submission_final.pptx / .pdf   # submission deck
     ├── results_*.json, fc_*.json # stored results of every study
     └── figs/                     # generated figures
 ```
 
-The dataset is not in this repository (see Data). `Huawei_TechArena_Physics.pptx`, `Huawei_TechArena_Architecture.pdf` and `report.html` are earlier teaching material and are partly outdated.
+The dataset is not in this repository (see Data). `Huawei_TechArena_Architecture.pdf` and `report.html` are earlier teaching material and are partly outdated.
 
 ## Installation
 

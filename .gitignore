@@ -14,7 +14,9 @@ research/mentor_questions.md
 # render checks and scratch outputs
 research/figs/slide_check/
 research/qr_folder.png
-research/Huawei_TechArena_Submission_final.pptx
+# intermediate deck without the QR code; only the _final deck is kept
+research/Huawei_TechArena_Submission.pptx
+research/Huawei_TechArena_Submission.pdf
 
 # local Claude Code state
 .claude/

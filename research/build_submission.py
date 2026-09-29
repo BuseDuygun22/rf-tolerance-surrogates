@@ -106,117 +106,82 @@ def notes(slide, text):
 
 # ==================================================================== slide 1  — title
 s = S[0]
-title(s, 'Title 1', 'Physics-checked AI for RF tolerance analysis', 32)
+title(s, 'Title 1', 'AI cuts RF tolerance analysis from 277 days to 15 hours', 30)
 sub = s.shapes.add_textbox(Inches(1.2), Inches(5.72), Inches(10.93), Inches(0.5))
 sub.text_frame.word_wrap = True
 p = sub.text_frame.paragraphs[0]
 p.alignment = PP_ALIGN.CENTER
 r = p.add_run()
-r.text = 'Sub-topic 3  |  A 30-minute solver run replaced by a checked surrogate model'
+r.text = 'Sub-topic 3  |  A physics-checked AI model that stands in for the full-wave solver'
 r.font.size = Pt(17)
 r.font.color.rgb = MUTED
-notes(s, 'Opening, 30 seconds. Competence: this team treated the S-parameter physics as a hard constraint on the model, not a hope. '
-         'Relevance: one full-wave run takes 30 minutes, and the two things this challenge scores – sensitivity analysis and design search – '
-         'both need thousands to millions of runs. Promise: today we show one model, trained on 60 runs, that stands in for both, '
-         'checked against the physics and against boards it never saw.')
 
 # ==================================================================== slide 2  — problem (NEW)
 s_problem = prs.slides.add_slide(LAYOUTS['Title and Content'])
-title(s_problem, 'Title 1', 'One tolerance study costs months of solver time', 30)
+title(s_problem, 'Title 1', 'A tolerance study takes months to a century of solver time', 30)
 drop(ph(s_problem, 'Content Placeholder 2'))
 picture(s_problem, 'figs/deck_problem.png', Inches(0.92), Inches(2.0), Inches(11.5), Inches(3.3),
         'Four figures: one full-wave simulation takes 30 minutes; a sensitivity analysis on the solver needs 13,312 runs, 277 days; '
-        'a design search on the solver needs 1.92 million runs, 110 years; the design margin today is 0.25 to 0.40 dB against 1.3 dB of factory spread.')
-takeaway(s_problem, 'Only 3 in 10 boards pass today, and finding out why with the solver alone is not affordable.', top=5.75, size=17)
-notes(s_problem, 'Set up the stakes before showing the solution, about one minute. Every number here comes from the mentor-supplied solver '
-      'cost (30 minutes per run) and from the dataset itself – nothing is a claim about our method yet. The margin tile is why it matters: '
-      'the nominal design passes, but factory scatter is three to five times larger than its margin, so about 70% of boards fail the illustrative limits.')
+        'a design search on the solver needs 1.92 million runs, 110 years; only 30 percent of boards pass today, because the 0.3 dB design margin is small against 1.3 dB of factory spread.')
+takeaway(s_problem, 'Finding and fixing the causes with the solver alone is not affordable.', top=5.75, size=17)
 
 # ==================================================================== slide 3  — solution (was slide 2)
 s = S[1]
-title(s, 'Title 1', 'A 60-run surrogate stands in for the solver', 30)
+title(s, 'Title 1', 'One AI model, trained on 60 simulations, replaces the solver', 30)
 body = ph(s, 'Content Placeholder 2')
 body.text_frame.clear()
-set_text(body, ['Kriging model of the 11 tolerance parameters.',
-                '60 solver runs are enough: ten random 60-run models reproduce the 540-run results within about 3 points.',
-                'Reciprocity built in, passivity checked on every predicted matrix – confirmed by Huawei as physics-informed.',
-                'One model answers both criteria: sensitivity (KPI 2) and design search (KPI 1).'],
-         16, space_after=12)
+set_text(body, ['Learns how the 11 manufacturing tolerances shape the S-parameters.',
+                'Obeys the physics: reciprocity built in, passivity checked on every prediction.',
+                '60 simulations are enough: ten random 60-simulation models match the full-data results within about 3 points.'],
+         17, space_after=16)
 drop(ph(s, 'Picture Placeholder 3'))
-picture(s, 'figs/deck_pipeline.png', Inches(6.75), Inches(2.0), Inches(5.67), Inches(4.76),
-        'Six-stage pipeline: audit the data, kriging with consistency checks, validation on unseen boards, '
-        'exact sensitivity analysis (criterion 2), virtual design and tolerance study (criterion 1), scenario check with boards held out.')
-notes(s, 'Walk the pipeline top to bottom. Be precise if asked: the validation numbers on slide 6 come from models trained on the '
-         '540 boards minus the held-out ones; the 60-run claim rests on a separate test in which ten random 60-run models gave the same '
-         'pass-rate staircase within 1.7 to 3.3 points and the same top two tolerances every time. No extra solver runs were available, '
-         'so for each scenario we removed its real boards, retrained, and compared – that is the last stage. Polynomial chaos and a '
-         'neural network agree within 2 points, which shows robustness to model choice, not correctness by itself: they share the same boards.')
+picture(s, 'figs/deck_flow.png', Inches(6.75), Inches(2.0), Inches(5.67), Inches(4.76),
+        'How it works: 60 full-wave simulations train an AI model (kriging) that predicts every S-parameter in milliseconds, '
+        'with reciprocity built in and passivity checked. The model feeds two tasks: sensitivity analysis (KPI 2) and design search (KPI 1).')
 
 # ==================================================================== slide 4  — why better: KPI 2, sensitivity (was slide 3)
 s = S[2]
-title(s, 'Title 1', 'KPI 2 – sensitivity: the right drivers from 30 runs, not 13,000', 28)
+title(s, 'Title 1', 'Thirty simulations find the tolerances that matter, with 5× lower error', 28)
 drop(ph(s, 'Content Placeholder 2'))
 drop(ph(s, 'Content Placeholder 3'))
-picture(s, 'figs/deck_h2h.png', Inches(0.92), Inches(2.0), Inches(5.67), Inches(4.25),
-        'Line chart of error in sensitivity indices against real simulations used. Conventional Monte Carlo is 3 to 5 '
-        'times worse than kriging, polynomial chaos and a neural network, which are tied near the reference noise floor.')
+picture(s, 'figs/deck_sens.png', Inches(0.92), Inches(2.0), Inches(5.67), Inches(4.25),
+        'Bar chart, sensitivity analysis from the same 30 simulations: conventional Monte Carlo error 0.078, this project 0.016, '
+        'five times lower. Polynomial chaos and a neural network reach the same accuracy as kriging.')
 picture(s, 'figs/deck_drivers.png', Inches(6.75), Inches(2.0), Inches(5.67), Inches(4.25),
         'Leading sensitivity drivers for reflection, coupling and isolation from 45 real runs with 90 percent bootstrap '
         'intervals. Board thickness and copper widths A7 and A3 dominate. All nine intervals contain the value from all 540 runs.')
-takeaway(s, 'At equal runs, conventional Monte Carlo is 3 to 5 times less accurate; the three surrogates tie.')
-notes(s, "Left: reference is Monte Carlo on all 540 real runs; errors near 0.017 sit at that reference's own noise floor. "
-         'Right: intervals shown for the three leading drivers only – near-zero indices give an unreliable bootstrap. '
-         'Be upfront: our method ties polynomial chaos and a neural network here. The win is against conventional Monte Carlo, '
-         'which is what the criterion asks for, and the closed-form indices remove sampling noise entirely.')
+takeaway(s, 'Board thickness and copper widths A7 and A3 drive most of the variation: the tolerances worth tightening.')
 
 # ==================================================================== slide 5  — why better: KPI 1, design cost (was slide 4)
 s = S[3]
-title(s, 'Title 1', 'KPI 1 – design search: conventional versus this pipeline', 28)
-for name, text in (('Text Placeholder 2', 'Conventional: solver in the loop'),
-                   ('Text Placeholder 4', 'This pipeline: one 60-run surrogate')):
-    h = ph(s, name)
-    h.text_frame.clear()
-    set_text(h, [text], 18, bold=True, color=CHAR)
-drop(ph(s, 'Content Placeholder 3'))
-drop(ph(s, 'Content Placeholder 5'))
-picture(s, 'figs/deck_conv.png', Inches(0.92), Inches(2.74), Inches(5.64), Inches(3.55),
-        'Conventional cost at 30 minutes per simulation: which errors matter 277 days, how many boards pass 12 days, '
-        'a design search of 1.92 million evaluations 110 years.')
-picture(s, 'figs/deck_ours.png', Inches(6.75), Inches(2.74), Inches(5.64), Inches(3.55),
-        'This pipeline: which errors matter 15 hours, how many boards pass 20 hours, a design search of 1.92 million '
-        'surrogate evaluations 30 hours plus 5 minutes, all from one model built on 60 simulations.')
-takeaway(s, 'Serial times at 30 minutes per run. With 100 solver licences in parallel, the design search alone still takes about a year.',
-         top=6.4, size=14)
-notes(s, 'Criterion 1 is the third row: 961 design points, each scored on 2,000 virtual manufacturing realizations, so 1.92 million '
-         'surrogate evaluations in 5 minutes on a laptop. Say plainly that these are surrogate evaluations, and give the parallel caveat first.')
+title(s, 'Title 1', 'A 110-year design search now takes 30 hours', 30)
+for name in ('Text Placeholder 2', 'Text Placeholder 4', 'Content Placeholder 3', 'Content Placeholder 5'):
+    drop(ph(s, name))
+picture(s, 'figs/deck_design.png', Inches(0.92), Inches(2.0), Inches(11.5), Inches(3.9),
+        'Design search over 961 candidate designs, each tested on 2,000 virtual boards. Solver only: 110 years, 1.92 million '
+        'simulations one after another. This project: 30 hours, 60 simulations to train the model, then 5 minutes of computing.')
+takeaway(s, 'The same 60-simulation model also delivers the sensitivity analysis: no extra simulations needed.', top=6.15, size=16)
 
 # ==================================================================== slide 6  — validation (was slide 5)
 s = S[4]
-title(s, 'Title 1', 'Validation: from 30% to 85% of boards passing', 26)
+title(s, 'Title 1', 'Four design changes lift the pass rate to 73–85%', 24)
 body = ph(s, 'Text Placeholder 3')
 body.text_frame.clear()
-set_text(body, ["Each scenario's real boards were held out, the model retrained, and its prediction compared with them: 5 of 5 inside the real interval.",
-                'Last step: 85% predicted, 73% observed on 30 boards – consistent, not proof.',
-                'Pass/fail agreement stays 92-97% when the illustrative limits are halved or tripled.',
-                'Open: model bias, the confidential stack-up, no extra solver runs.'],
-         14, space_after=10)
-add_para(body, '0 of 734 million predicted matrices break passivity.',
+set_text(body, ['Changes: higher laminate constant; tighter A7, board-thickness and A3 tolerances.',
+                "Each prediction was made without that scenario's real boards: 5 of 5 fall within the real range.",
+                'Holds when the illustrative limits are halved or tripled (92–97% agreement).'],
+         14, space_after=12)
+add_para(body, '0 of 734 million predictions break the physics (passivity).',
          15, bold=True, color=BRAND, space_before=10)
 drop(ph(s, 'Picture Placeholder 2'))
 picture(s, 'figs/deck_stair.png', Inches(5.67), Inches(1.08), Inches(6.75), Inches(5.33),
         'Bar chart of boards passing under stated limits, from the full-curve model retrained without each scenario\'s boards: today 30 percent, '
         'new laminate 47, plus copper width A7 tolerance halved 57, plus board thickness tolerance halved 65, plus copper width A3 '
         'tolerance halved 85. The real boards in each scenario give 28, 43, 54, 63 and 73 percent with intervals that contain every prediction.')
-notes(s, 'Pass rates depend on limits we chose; the mentor confirmed the challenge is not about board performance, so the message is the '
-         'method and its checks, not the number itself. Sources of uncertainty are identified, not added together: sampling of the real '
-         'boards (about 6 to 15 points), training-set variation (about 1 point), and model bias, which the data cannot resolve. '
-         'The last bar has 30 real boards; the 11-point gap sits inside its 95% interval, so call it consistent, not a confirmation. '
-         'The physics check ran on the full 3,012-output model: every one of 733.7 million predicted S-matrices, across every full-curve '
-         'study (leave-window-out, 5-fold, scenario staircase, 961-point design grid), stayed passive.')
 
 # ==================================================================== slide 7  — state of the art & references (NEW)
 s_sota = prs.slides.add_slide(LAYOUTS['Two Content'])
-title(s_sota, 'Title 1', 'State of the art, and where this differs', 28)
+title(s_sota, 'Title 1', 'Established methods, applied with physics checks and real-board validation', 26)
 drop(ph(s_sota, 'Content Placeholder 2'))
 drop(ph(s_sota, 'Picture Placeholder 3'))
 picture(s_sota, 'figs/deck_sota.png', Inches(0.92), Inches(1.75), Inches(11.5), Inches(3.55),
@@ -224,7 +189,7 @@ picture(s_sota, 'figs/deck_sota.png', Inches(0.92), Inches(1.75), Inches(11.5), 
         'here it is checked against polynomial chaos and a neural network. Output: the literature compresses the response first; here PCA '
         'raised the error 2.8 times, so all 3,012 outputs are predicted. Physics: physics-informed networks need field data; only port data '
         'exists, so reciprocity is built in and passivity checked on 734 million matrices. Sensitivity: closed-form GP Sobol indices are known; '
-        'here applied to 11 manufacturing tolerances, top drivers right from 30 runs. Yield: GP-assisted Monte Carlo re-checks boards in the '
+        'here applied to 11 manufacturing tolerances, leading tolerances found from 30 simulations. Pass rate: GP-assisted Monte Carlo re-checks boards in the '
         'solver; here no extra runs were allowed, so pass rates are checked against held-out real boards.')
 citations = [['[1] Oakley & O\'Hagan (2004), J. R. Stat. Soc. B 66(3)',
               '[2] Marrel et al. (2009), Reliab. Eng. Syst. Saf. 94(3)',
@@ -244,11 +209,7 @@ for col, (x, w) in zip(citations, ((0.92, 6.3), (7.45, 4.97))):
         r2 = p2.add_run()
         r2.text = c
         r2.font.size = Pt(10)
-        r2.font.color.rgb = MUTED
-notes(s_sota, 'This slide is the one Huawei\'s 2026-09-22 e-mail explicitly allows in addition to the 5-slide core. '
-      'Keep it brief if asked live: the one-line version is "kriging is already the field\'s default for EM surrogates; '
-      'the difference here is enforcing measurement-level physics because no field data existed, and checking every choice '
-      'against this specific dataset rather than assuming the literature default (PCA) would transfer."')
+        r2.font.color.rgb = CHAR
 
 # ==================================================================== slide 8  — project folder / QR (was slide 6)
 s = S[5]
@@ -258,7 +219,7 @@ body.text_frame.clear()
 set_text(body, ['Scan to open the full material',
                 'README: pipeline, evidence and limitations',
                 'Code that reproduces every number',
-                'Figures and the architecture report'], 16, space_after=10)
+                'Stored results of every study'], 16, space_after=10)
 drop(ph(s, 'Picture Placeholder 2'))
 box = s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(7.29), Inches(1.64), Inches(4.5), Inches(4.16))
 box.name = 'QR_PLACEHOLDER'
@@ -282,8 +243,6 @@ r2 = p2.add_run()
 r2.text = 'run insert_qr.py with your folder link'
 r2.font.size = Pt(14)
 r2.font.color.rgb = MUTED
-notes(s, 'The template reserves this slide for a link to a folder. Share the code, README and report there. '
-         'Do not put the Huawei dataset in it.')
 
 # ==================================================================== slide 9  — thank you / call to action (was slide 7)
 s = S[6]
@@ -300,11 +259,9 @@ r.font.color.rgb = BRAND
 p2 = cta.text_frame.add_paragraph()
 p2.alignment = PP_ALIGN.CENTER
 r2 = p2.add_run()
-r2.text = '60 solver runs  ·  exact sensitivity analysis  ·  pass rates confirmed on held-out real boards'
+r2.text = '60 simulations  ·  exact sensitivity analysis  ·  pass rates checked on held-out real boards'
 r2.font.size = Pt(13)
 r2.font.color.rgb = MUTED
-notes(s, 'Close on the one line to remember: 277 days of solver time become 15 hours, and every one of 734 million predicted '
-         'matrices obeys the physics. Then stop -- do not trail off into a plain thank-you.')
 
 # slides added from a layout lack the footer and slide number the template's own slides carry: copy them over
 for new in (s_problem, s_sota):
@@ -322,6 +279,66 @@ for el in ids:
     sldIdLst.remove(el)
 for el in new_ids:
     sldIdLst.append(el)
+
+# ==================================================================== presenter notes, in final slide order
+NOTES = [
+    # 1 title
+    'This project addresses Sub-topic 3: applying AI to the modelling of electromagnetic problems. One full-wave simulation '
+    'of the supplied coupler takes about 30 minutes, while the two tasks the challenge evaluates, sensitivity analysis and '
+    'design, require thousands to millions of simulations. We present a single surrogate model, built from about 60 simulations, '
+    'that replaces the solver for both tasks, respects the S-parameter physics on every prediction, and is validated against '
+    'boards it has never seen.',
+    # 2 problem
+    'The figures on this slide use only the solver cost confirmed by Huawei (30 minutes per run) and the supplied dataset. '
+    'A standard Saltelli sensitivity analysis requires 13,312 runs, or 277 days of serial solver time; a design search over '
+    '961 candidate designs, each evaluated on 2,000 manufacturing realisations, would take about 110 years. The nominal design '
+    'meets the illustrative limits, but its 0.25-0.40 dB margin is small compared with the 1.3 dB spread caused by manufacturing '
+    'tolerances, so only about 30% of boards pass.',
+    # 3 solution
+    'The surrogate is a kriging (Gaussian-process) model of the 11 tolerance parameters. Reciprocity is imposed by construction, '
+    'and passivity is verified on every predicted S-matrix; Huawei confirmed that enforcing these S-parameter laws qualifies as '
+    'physics-informed for this challenge. The validation results use models trained on the 540 supplied designs, excluding the '
+    'held-out boards. A separate test with ten random 60-run training sets reproduced the pass-rate results within 1.7 to 3.3 '
+    'points and identified the same two leading tolerances in every case. Polynomial-chaos and neural-network surrogates agree '
+    'with kriging within 2 points.',
+    # 4 KPI 2
+    'Left: error of the sensitivity indices when both methods use the same 30 simulations, measured against a reference computed '
+    'from all 540 simulations. Conventional Monte Carlo reaches 0.078, the kriging model 0.016, about five times lower; with 45 and '
+    '60 simulations the advantage is three to four times. Polynomial chaos and a neural network perform equivalently to kriging, so '
+    'the gain is over the conventional approach named in the criterion. Right: the three leading tolerances per metric with 90% '
+    'bootstrap intervals from 45 simulations. Board thickness and copper widths A7 and A3 dominate, and every interval contains the '
+    'full-data value. These are the tolerances the design changes on slide 6 act on.',
+    # 5 KPI 1
+    'Serial solver time at 30 minutes per run, conventional workflow versus this pipeline. The design search evaluates 961 '
+    'candidate designs, each on 2,000 simulated manufacturing realisations: 1.92 million surrogate evaluations, completed in '
+    'about 5 minutes after the 60 training simulations. Even with 100 solver licences running in parallel, the conventional '
+    'design search would still take about a year.',
+    # 6 validation
+    'The four changes act on the tolerances identified on slide 4: a laminate with a higher dielectric constant (4.02), then halved '
+    'tolerances on copper width A7, board thickness and copper width A3. For each scenario, the real boards falling inside it were '
+    'removed from training, the model was retrained, and its predicted pass rate was compared with those boards. All five predictions '
+    'fall within the 95% range of the real boards. The final scenario rests on 30 boards: the model predicts 85%, the real boards show '
+    '73%, and the difference is within sampling uncertainty, hence the range 73-85%. The acceptance limits are illustrative, and '
+    'pass/fail agreement remains 92-97% when they are halved or tripled. The full-curve model checked all 734 million predicted '
+    'S-matrices across every study, and none violated passivity. Remaining limitations: model bias '
+    'cannot be separated from sampling noise with the available boards, the stack-up is confidential, and no additional solver '
+    'runs were available to confirm the proposed design.',
+    # 7 state of the art
+    'Kriging is well established for electromagnetic surrogate modelling, and closed-form Sobol indices from Gaussian processes '
+    'are known in statistics. The contribution of this work lies in how these methods are applied and verified: physics is '
+    'enforced at the port level because no field data were available, the literature\'s default compression (PCA) was tested '
+    'and rejected on this data, and every result was validated against real boards held out from training rather than against '
+    'additional simulations.',
+    # 8 project folder
+    'The repository contains the code that reproduces every figure and number in this presentation, the stored results of each '
+    'study, and a README describing the pipeline, the validation and the limitations. The Huawei dataset is not included.',
+    # 9 closing
+    'In summary: 277 days of solver time are reduced to 15 hours, the 110-year design search to about 30 hours, and every one of '
+    '734 million predicted S-matrices satisfies the physical constraints.',
+]
+assert len(NOTES) == len(prs.slides)
+for sl, text in zip(prs.slides, NOTES):
+    notes(sl, text)
 
 for sl in prs.slides:
     footer(sl)
