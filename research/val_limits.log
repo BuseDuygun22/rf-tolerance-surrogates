@@ -1,0 +1,10 @@
+fold
+fold
+fold
+fold
+fold
+{'margin_factor': 0.5, 'real_pass_pct': 11.296296296296296, 'model_pass_pct': 10.555555555555555, 'verdict_agreement': 96.66666666666667}
+{'margin_factor': 1.0, 'real_pass_pct': 27.22222222222222, 'model_pass_pct': 26.481481481481485, 'verdict_agreement': 92.96296296296296}
+{'margin_factor': 1.5, 'real_pass_pct': 49.074074074074076, 'model_pass_pct': 49.25925925925926, 'verdict_agreement': 91.66666666666666}
+{'margin_factor': 2.0, 'real_pass_pct': 69.07407407407408, 'model_pass_pct': 69.07407407407408, 'verdict_agreement': 92.5925925925926}
+{'margin_factor': 3.0, 'real_pass_pct': 89.25925925925927, 'model_pass_pct': 90.18518518518519, 'verdict_agreement': 97.22222222222221}

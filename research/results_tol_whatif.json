@@ -1,0 +1,22 @@
+{
+ "redesigned, factory tolerances as supplied": {
+  "yield_pct": 45.098,
+  "ci95_pct": 0.3084102442084828
+ },
+ "+ board thickness 10% -> 5%": {
+  "yield_pct": 47.684,
+  "ci95_pct": 0.3095705769415175
+ },
+ "+ width A7 5% -> 2.5%": {
+  "yield_pct": 55.838,
+  "ci95_pct": 0.3077835221620807
+ },
+ "+ both": {
+  "yield_pct": 63.482000000000006,
+  "ci95_pct": 0.2984247672851836
+ },
+ "+ both, and width A3 5% -> 2.5%": {
+  "yield_pct": 83.50800000000001,
+  "ci95_pct": 0.23001532680535874
+ }
+}

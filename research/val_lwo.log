@@ -1,0 +1,5 @@
+LWO today      window 217 boards held out; real  28.1% [22.6,34.4]  model  31.2%  inside=True  verdict agreement on held-out boards 89%
+LWO laminate   window 225 boards held out; real  42.7% [36.4,49.2]  model  43.0%  inside=True  verdict agreement on held-out boards 93%
+LWO +A7        window  99 boards held out; real  53.5% [43.8,63.0]  model  55.5%  inside=True  verdict agreement on held-out boards 91%
+LWO +A7+h      window  52 boards held out; real  63.5% [49.9,75.2]  model  63.6%  inside=True  verdict agreement on held-out boards 88%
+LWO +A7+h+A3   window  30 boards held out; real  73.3% [55.6,85.8]  model  83.3%  inside=True  verdict agreement on held-out boards 80%

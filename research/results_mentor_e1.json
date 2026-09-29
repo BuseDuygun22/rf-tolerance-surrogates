@@ -1,0 +1,95 @@
+{
+ "steps": [
+  {
+   "step": "today",
+   "n_real_boards": 214,
+   "real_pass_pct": 30.373831775700936,
+   "ci_lo": 24.603223677053933,
+   "ci_hi": 36.836648229872935,
+   "model_pct": 32.31,
+   "model_inside_ci": true
+  },
+  {
+   "step": "laminate",
+   "n_real_boards": 225,
+   "real_pass_pct": 42.666666666666664,
+   "ci_lo": 36.38038305130548,
+   "ci_hi": 49.19916192653072,
+   "model_pct": 45.04,
+   "model_inside_ci": true
+  },
+  {
+   "step": "+A7 halved",
+   "n_real_boards": 99,
+   "real_pass_pct": 53.535353535353536,
+   "ci_lo": 43.76291394106047,
+   "ci_hi": 63.043670164982224,
+   "model_pct": 55.74,
+   "model_inside_ci": true
+  },
+  {
+   "step": "+thickness halved",
+   "n_real_boards": 52,
+   "real_pass_pct": 63.46153846153846,
+   "ci_lo": 49.87142858480117,
+   "ci_hi": 75.19948628869815,
+   "model_pct": 63.32,
+   "model_inside_ci": true
+  },
+  {
+   "step": "+A3 halved",
+   "n_real_boards": 30,
+   "real_pass_pct": 73.33333333333333,
+   "ci_lo": 55.551697955688304,
+   "ci_hi": 85.81750444608937,
+   "model_pct": 83.27,
+   "model_inside_ci": true
+  }
+ ],
+ "dk_bins": [
+  {
+   "dk_lo": 3.7010954,
+   "dk_hi": 3.78661132,
+   "n": 108,
+   "pass_pct": 2.7777777777777777,
+   "iso_fail_pct": 82.4074074074074,
+   "mean_iso_dB": -14.569837971769804
+  },
+  {
+   "dk_lo": 3.786826872,
+   "dk_hi": 3.872119493,
+   "n": 108,
+   "pass_pct": 16.666666666666664,
+   "iso_fail_pct": 53.70370370370371,
+   "mean_iso_dB": -14.883123501571252
+  },
+  {
+   "dk_lo": 3.872905986,
+   "dk_hi": 3.945662909,
+   "n": 108,
+   "pass_pct": 27.77777777777778,
+   "iso_fail_pct": 16.666666666666664,
+   "mean_iso_dB": -15.25749862366251
+  },
+  {
+   "dk_lo": 3.945680574,
+   "dk_hi": 4.027248388,
+   "n": 108,
+   "pass_pct": 42.592592592592595,
+   "iso_fail_pct": 5.555555555555555,
+   "mean_iso_dB": -15.524160168115937
+  },
+  {
+   "dk_lo": 4.028490642,
+   "dk_hi": 4.099800541,
+   "n": 108,
+   "pass_pct": 46.2962962962963,
+   "iso_fail_pct": 0.0,
+   "mean_iso_dB": -15.845070645033585
+  }
+ ],
+ "spearman_dk_iso": [
+  -0.8030902407453768,
+  4.5470163117293177e-123
+ ]
+}

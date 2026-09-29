@@ -1,0 +1,37 @@
+[
+ {
+  "step": "today",
+  "yield_pct": 32.31,
+  "ci95_pct": 0.13,
+  "fail_S11": 28.3,
+  "fail_iso": 24.7
+ },
+ {
+  "step": "laminate",
+  "yield_pct": 45.04,
+  "ci95_pct": 0.14,
+  "fail_S11": 30.1,
+  "fail_iso": 3.1
+ },
+ {
+  "step": "+A7",
+  "yield_pct": 55.74,
+  "ci95_pct": 0.14,
+  "fail_S11": 27.8,
+  "fail_iso": 2.0
+ },
+ {
+  "step": "+A7+h",
+  "yield_pct": 63.32,
+  "ci95_pct": 0.13,
+  "fail_S11": 17.7,
+  "fail_iso": 0.1
+ },
+ {
+  "step": "+A7+h+A3",
+  "yield_pct": 83.27,
+  "ci95_pct": 0.1,
+  "fail_S11": 14.4,
+  "fail_iso": 0.0
+ }
+]

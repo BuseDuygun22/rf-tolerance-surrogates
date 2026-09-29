@@ -1,0 +1,20 @@
+dataset Huawei/
+*.csv
+*.pkl
+*.npy
+*.npz
+fc_*.log
+fc_done.flag
+__pycache__/
+
+# confidential or third-party files (vendor datasheet, internal questions)
+research/*_dk_df.pdf
+research/mentor_questions.md
+
+# render checks and scratch outputs
+research/figs/slide_check/
+research/qr_folder.png
+research/Huawei_TechArena_Submission_final.pptx
+
+# local Claude Code state
+.claude/

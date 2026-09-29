@@ -1,0 +1,23 @@
+halve $DK        gain  +0.9 pt
+halve $R0402_1   gain  +0.1 pt
+halve $R0402_2   gain  +0.0 pt
+halve $R0402_RL  gain  -0.1 pt
+halve TOL_LW_A1  gain  +0.0 pt
+halve TOL_LW_A3  gain  +9.1 pt
+halve TOL_LW_A5  gain  +0.0 pt
+halve TOL_LW_A7  gain +10.0 pt
+halve TOL_LW_A9  gain  +0.2 pt
+halve TOL_h      gain  +2.6 pt
+halve t_art1     gain  +0.0 pt
+cost + 0.0  pass  44.8%  {'TOL_h': 1.0, 'TOL_LW_A7': 1.0, 'TOL_LW_A3': 1.0, 'TOL_LW_A9': 1.0, '$DK': 1.0}
+cost + 1.0  pass  54.8%  {'TOL_h': 1.0, 'TOL_LW_A7': 0.5, 'TOL_LW_A3': 1.0, 'TOL_LW_A9': 1.0, '$DK': 1.0}
+cost + 2.0  pass  68.2%  {'TOL_h': 1.0, 'TOL_LW_A7': 0.5, 'TOL_LW_A3': 0.5, 'TOL_LW_A9': 1.0, '$DK': 1.0}
+cost + 3.0  pass  82.8%  {'TOL_h': 0.5, 'TOL_LW_A7': 0.5, 'TOL_LW_A3': 0.5, 'TOL_LW_A9': 1.0, '$DK': 1.0}
+cost + 4.0  pass  82.8%  {'TOL_h': 0.5, 'TOL_LW_A7': 0.5, 'TOL_LW_A3': 0.5, 'TOL_LW_A9': 0.5, '$DK': 1.0}
+cost + 5.0  pass  89.9%  {'TOL_h': 0.5, 'TOL_LW_A7': 0.25, 'TOL_LW_A3': 0.5, 'TOL_LW_A9': 1.0, '$DK': 1.0}
+cost + 6.0  pass  90.0%  {'TOL_h': 0.5, 'TOL_LW_A7': 0.25, 'TOL_LW_A3': 0.5, 'TOL_LW_A9': 0.5, '$DK': 1.0}
+cost + 7.0  pass  97.4%  {'TOL_h': 0.25, 'TOL_LW_A7': 0.25, 'TOL_LW_A3': 0.5, 'TOL_LW_A9': 1.0, '$DK': 1.0}
+cost + 8.0  pass  97.5%  {'TOL_h': 0.25, 'TOL_LW_A7': 0.25, 'TOL_LW_A3': 0.5, 'TOL_LW_A9': 1.0, '$DK': 0.5}
+cost + 9.0  pass  99.3%  {'TOL_h': 0.25, 'TOL_LW_A7': 0.25, 'TOL_LW_A3': 0.25, 'TOL_LW_A9': 1.0, '$DK': 1.0}
+cost +10.0  pass  99.3%  {'TOL_h': 0.25, 'TOL_LW_A7': 0.25, 'TOL_LW_A3': 0.25, 'TOL_LW_A9': 0.5, '$DK': 1.0}
+saved results_inn_tolalloc.json

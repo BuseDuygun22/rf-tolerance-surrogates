@@ -1,0 +1,6 @@
+n= 15  mean|dST|=0.0350  max|dST| median=0.103  top-2 drivers right 83%
+n= 30  mean|dST|=0.0122  max|dST| median=0.046  top-2 drivers right 97%
+n= 45  mean|dST|=0.0095  max|dST| median=0.035  top-2 drivers right 100%
+n= 60  mean|dST|=0.0069  max|dST| median=0.025  top-2 drivers right 100%
+n= 90  mean|dST|=0.0043  max|dST| median=0.020  top-2 drivers right 100%
+n=120  mean|dST|=0.0030  max|dST| median=0.015  top-2 drivers right 100%

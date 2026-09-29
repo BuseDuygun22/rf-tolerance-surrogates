@@ -1,0 +1,658 @@
+{
+ "assumptions": "Stage 4 re-run with Huawei's realistic manufacturing tolerances.\n\nEarlier sensitivity / yield / redesign studies sampled the min-max box of the\n540 supplied designs. Huawei then supplied realistic per-parameter tolerances\n(2026-09-17), which do not match that box. This script re-runs all three\nstudies under those tolerances.\n\nAssumptions, each stated where it is used:\n  * Nominal = the average of each column in the dataset. For the two TOL_\n    columns the natural nominal is used instead (1.0 for the thickness\n    multiplier, 0.0 for the normalised width deviations), which equals the\n    average to within sampling noise.\n  * Tolerances are uniform within +/- tol. A Gaussian variant (tol = 3 sigma)\n    is reported as a robustness check on yield.\n  * TOL_LW_A* are stored as normalised deviations in [-1, 1]. Their 5% cannot\n    be converted without the nominal width, so +/-1 is taken to be the full\n    tolerance band. This is the reading under which TOL_h, the one TOL_\n    column that can be checked, matches Huawei's table exactly.\n  * Realistic resistor tolerance (5%) is five times wider than the training\n    data (1%). Variant A evaluates the full 5% and so extrapolates; variant B\n    caps resistors at the trained range. Both are reported.\n\nSurrogate: one kriging model per scalar KPI, trained on all 540 designs.\nThe statistical studies only need the scalar KPIs the spec is written\nagainst, and a per-KPI model gets its own length scales (a single shared\nkernel was the failure mode found with PCA).\n\nUsage: python tolerance_study.py cv | train | studies | redesign\n",
+ "solver_minutes": 30.0,
+ "spec": {
+  "S11_max": -5.4,
+  "S31_lo": -13.3,
+  "S31_hi": -12.5,
+  "iso_max": -14.9
+ },
+ "train_s": 234.4063720703125,
+ "bounds_A_realistic": {
+  "$DK": [
+   3.82978,
+   3.9861
+  ],
+  "$R0402_1": [
+   1044.84813,
+   1154.83215
+  ],
+  "$R0402_2": [
+   324.85978,
+   359.05555
+  ],
+  "$R0402_RL": [
+   47.47444,
+   52.47175
+  ],
+  "TOL_LW_A1": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A3": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A5": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A7": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A9": [
+   -1.0,
+   1.0
+  ],
+  "TOL_h": [
+   0.9,
+   1.1
+  ],
+  "t_art1": [
+   1.85054,
+   1.88792
+  ]
+ },
+ "bounds_B_resistors_capped": {
+  "$DK": [
+   3.82978,
+   3.9861
+  ],
+  "$R0402_1": [
+   1089.00488,
+   1110.8966
+  ],
+  "$R0402_2": [
+   338.6196,
+   345.38686
+  ],
+  "$R0402_RL": [
+   49.50038,
+   50.49956
+  ],
+  "TOL_LW_A1": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A3": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A5": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A7": [
+   -1.0,
+   1.0
+  ],
+  "TOL_LW_A9": [
+   -1.0,
+   1.0
+  ],
+  "TOL_h": [
+   0.9,
+   1.1
+  ],
+  "t_art1": [
+   1.85054,
+   1.88792
+  ]
+ },
+ "nominal": {
+  "$DK": 3.90794,
+  "$R0402_1": 1099.84014,
+  "$R0402_2": 341.95767,
+  "$R0402_RL": 49.9731,
+  "TOL_LW_A1": 0.0,
+  "TOL_LW_A3": 0.0,
+  "TOL_LW_A5": 0.0,
+  "TOL_LW_A7": 0.0,
+  "TOL_LW_A9": 0.0,
+  "TOL_h": 1.0,
+  "t_art1": 1.86923
+ },
+ "nominal_kpi": {
+  "S11_max_dB": -5.6514,
+  "S21_mean_dB": -2.3781,
+  "S31_mean_dB": -12.9236,
+  "iso_max_dB": -15.2006,
+  "S21_ripple_dB": 3.5121
+ },
+ "nominal_passes": true,
+ "sobol_A_realistic": {
+  "n_evals": 53248,
+  "surrogate_s": 10.933401823043823,
+  "indices": {
+   "S11_max_dB": {
+    "ST": [
+     0.0019,
+     0.0,
+     0.0001,
+     0.0002,
+     0.0,
+     0.1045,
+     0.0,
+     0.3825,
+     0.0006,
+     0.5116,
+     0.0
+    ],
+    "ST_conf": [
+     0.0001,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0044,
+     0.0,
+     0.0149,
+     0.0,
+     0.0188,
+     0.0
+    ],
+    "S1": [
+     0.0015,
+     0.0,
+     0.0001,
+     0.0002,
+     0.0,
+     0.1038,
+     0.0,
+     0.3814,
+     0.0006,
+     0.5109,
+     0.0
+    ],
+    "spread_p5_p95": 1.3835444652847952
+   },
+   "S21_mean_dB": {
+    "ST": [
+     0.0058,
+     0.0001,
+     0.0002,
+     0.0002,
+     0.0001,
+     0.0394,
+     0.0,
+     0.6991,
+     0.0003,
+     0.2586,
+     0.0
+    ],
+    "ST_conf": [
+     0.0003,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0018,
+     0.0,
+     0.026,
+     0.0,
+     0.0111,
+     0.0
+    ],
+    "S1": [
+     0.0046,
+     0.0001,
+     0.0002,
+     0.0002,
+     0.0001,
+     0.0391,
+     0.0,
+     0.6965,
+     0.0003,
+     0.2554,
+     0.0
+    ],
+    "spread_p5_p95": 0.5202304688738151
+   },
+   "S31_mean_dB": {
+    "ST": [
+     0.0018,
+     0.0,
+     0.0001,
+     0.0003,
+     0.0,
+     0.4553,
+     0.0,
+     0.5342,
+     0.0001,
+     0.0093,
+     0.0
+    ],
+    "ST_conf": [
+     0.0001,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0169,
+     0.0,
+     0.0216,
+     0.0,
+     0.0005,
+     0.0
+    ],
+    "S1": [
+     0.0013,
+     0.0,
+     0.0001,
+     0.0003,
+     0.0,
+     0.4546,
+     -0.0,
+     0.5343,
+     0.0001,
+     0.0085,
+     -0.0
+    ],
+    "spread_p5_p95": 1.2566015392260272
+   },
+   "iso_max_dB": {
+    "ST": [
+     0.2199,
+     0.0001,
+     0.0009,
+     0.021,
+     0.0001,
+     0.0456,
+     0.0,
+     0.1488,
+     0.0263,
+     0.5392,
+     0.0
+    ],
+    "ST_conf": [
+     0.0107,
+     0.0,
+     0.0,
+     0.001,
+     0.0,
+     0.002,
+     0.0,
+     0.0064,
+     0.001,
+     0.0218,
+     0.0
+    ],
+    "S1": [
+     0.2192,
+     0.0001,
+     0.0008,
+     0.0209,
+     0.0001,
+     0.0455,
+     0.0,
+     0.1476,
+     0.0258,
+     0.5386,
+     0.0
+    ],
+    "spread_p5_p95": 1.3613035870274466
+   },
+   "S21_ripple_dB": {
+    "ST": [
+     0.1269,
+     0.005,
+     0.0,
+     0.0001,
+     0.0,
+     0.0432,
+     0.0007,
+     0.737,
+     0.0393,
+     0.0661,
+     0.0
+    ],
+    "ST_conf": [
+     0.0056,
+     0.0002,
+     0.0,
+     0.0,
+     0.0,
+     0.0022,
+     0.0,
+     0.0254,
+     0.0018,
+     0.0048,
+     0.0
+    ],
+    "S1": [
+     0.1113,
+     0.0047,
+     0.0,
+     0.0002,
+     -0.0,
+     0.0381,
+     0.0009,
+     0.7336,
+     0.0375,
+     0.0553,
+     0.0
+    ],
+    "spread_p5_p95": 0.8745249673865465
+   }
+  }
+ },
+ "sobol_B_resistors_capped": {
+  "n_evals": 53248,
+  "surrogate_s": 8.763456106185913,
+  "indices": {
+   "S11_max_dB": {
+    "ST": [
+     0.0019,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1045,
+     0.0,
+     0.3826,
+     0.0006,
+     0.5117,
+     0.0
+    ],
+    "ST_conf": [
+     0.0001,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0049,
+     0.0,
+     0.0176,
+     0.0,
+     0.0227,
+     0.0
+    ],
+    "S1": [
+     0.0015,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1039,
+     0.0,
+     0.3815,
+     0.0006,
+     0.5111,
+     0.0
+    ],
+    "spread_p5_p95": 1.3827622685745595
+   },
+   "S21_mean_dB": {
+    "ST": [
+     0.0058,
+     0.0,
+     0.0,
+     0.0,
+     0.0001,
+     0.0395,
+     0.0,
+     0.6994,
+     0.0003,
+     0.2587,
+     0.0
+    ],
+    "ST_conf": [
+     0.0004,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0017,
+     0.0,
+     0.0289,
+     0.0,
+     0.0113,
+     0.0
+    ],
+    "S1": [
+     0.0046,
+     0.0,
+     0.0,
+     0.0,
+     0.0001,
+     0.0391,
+     0.0,
+     0.6968,
+     0.0003,
+     0.2554,
+     0.0
+    ],
+    "spread_p5_p95": 0.5200611995666922
+   },
+   "S31_mean_dB": {
+    "ST": [
+     0.0018,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4556,
+     0.0,
+     0.5344,
+     0.0001,
+     0.0093,
+     0.0
+    ],
+    "ST_conf": [
+     0.0001,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0186,
+     0.0,
+     0.0213,
+     0.0,
+     0.0004,
+     0.0
+    ],
+    "S1": [
+     0.0013,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4548,
+     -0.0,
+     0.5345,
+     0.0001,
+     0.0085,
+     -0.0
+    ],
+    "spread_p5_p95": 1.2565952538227805
+   },
+   "iso_max_dB": {
+    "ST": [
+     0.2246,
+     0.0,
+     0.0,
+     0.0009,
+     0.0001,
+     0.0466,
+     0.0,
+     0.152,
+     0.0268,
+     0.5508,
+     0.0
+    ],
+    "ST_conf": [
+     0.0095,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.002,
+     0.0,
+     0.0067,
+     0.0012,
+     0.0227,
+     0.0
+    ],
+    "S1": [
+     0.2239,
+     0.0,
+     0.0,
+     0.0009,
+     0.0001,
+     0.0465,
+     0.0,
+     0.1507,
+     0.0263,
+     0.5502,
+     0.0
+    ],
+    "spread_p5_p95": 1.348896526133176
+   },
+   "S21_ripple_dB": {
+    "ST": [
+     0.1276,
+     0.0002,
+     0.0,
+     0.0,
+     0.0,
+     0.0435,
+     0.0007,
+     0.7406,
+     0.0395,
+     0.0663,
+     0.0
+    ],
+    "ST_conf": [
+     0.0066,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0025,
+     0.0,
+     0.0312,
+     0.0018,
+     0.0044,
+     0.0
+    ],
+    "S1": [
+     0.1121,
+     0.0002,
+     0.0,
+     0.0,
+     -0.0,
+     0.0384,
+     0.0009,
+     0.737,
+     0.0377,
+     0.0554,
+     0.0
+    ],
+    "spread_p5_p95": 0.874861219826605
+   }
+  }
+ },
+ "yield_A_realistic_uniform": {
+  "n_evals": 100000,
+  "surrogate_s": 15.830811023712158,
+  "yield_pct": 32.423,
+  "ci95_pct": 0.29012297584220387,
+  "fail_rates": {
+   "S11": 0.28201,
+   "S31_low": 0.17409,
+   "S31_high": 0.14593,
+   "isolation": 0.24816
+  },
+  "kpi_p5_p95": {
+   "S11_max_dB": [
+    -6.372113527537416,
+    -4.978669456909741
+   ],
+   "S31_mean_dB": [
+    -13.551660198969918,
+    -12.29593600459889
+   ],
+   "iso_max_dB": [
+    -15.888762452248518,
+    -14.527858168629132
+   ]
+  }
+ },
+ "yield_B_resistors_capped_uniform": {
+  "n_evals": 100000,
+  "surrogate_s": 10.039271116256714,
+  "yield_pct": 32.418,
+  "ci95_pct": 0.29011133685331225,
+  "fail_rates": {
+   "S11": 0.28347,
+   "S31_low": 0.17522,
+   "S31_high": 0.14469,
+   "isolation": 0.24468
+  },
+  "kpi_p5_p95": {
+   "S11_max_dB": [
+    -6.3750779352650975,
+    -4.980434799475912
+   ],
+   "S31_mean_dB": [
+    -13.555745021946198,
+    -12.298515872266657
+   ],
+   "iso_max_dB": [
+    -15.885132343543843,
+    -14.536127265264595
+   ]
+  }
+ },
+ "yield_C_realistic_gaussian": {
+  "n_evals": 100000,
+  "surrogate_s": 11.810653448104858,
+  "yield_pct": 70.121,
+  "ci95_pct": 0.2837024922543755,
+  "fail_rates": {
+   "S11": 0.14702,
+   "S31_low": 0.0428,
+   "S31_high": 0.02459,
+   "isolation": 0.10546
+  },
+  "kpi_p5_p95": {
+   "S11_max_dB": [
+    -6.05524888215752,
+    -5.260557478133568
+   ],
+   "S31_mean_dB": [
+    -13.283099836288919,
+    -12.56736206228948
+   ],
+   "iso_max_dB": [
+    -15.600812073762938,
+    -14.805963599596108
+   ]
+  }
+ },
+ "sanity_data_box": {
+  "real_pass_fraction_540": 0.2722222222222222,
+  "surrogate_mc_pass_fraction": 0.27828
+ },
+ "extrapolation": {
+  "fraction_A_samples_outside": 0.9895,
+  "per_kpi": {
+   "S11_max_dB": {
+    "std_inside_trained": 0.09311851024952152,
+    "std_resistors_outside": 0.09565641705608176,
+    "ratio": 1.0272545898743402
+   },
+   "S31_mean_dB": {
+    "std_inside_trained": 0.042111858436168166,
+    "std_resistors_outside": 0.04413477547086181,
+    "ratio": 1.0480367551994865
+   },
+   "iso_max_dB": {
+    "std_inside_trained": 0.09421989648258436,
+    "std_resistors_outside": 0.09850516936553579,
+    "ratio": 1.0454816131510345
+   }
+  }
+ }
+}

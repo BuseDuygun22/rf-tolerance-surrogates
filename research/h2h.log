@@ -1,0 +1,10 @@
+S11_max_dB  n=30 ours: 0.023 (100%)  binned: 0.088 (90%)  pce: 0.024 (100%)  mlp+mc: 0.025 (100%)  linear: 0.032 (100%)
+S11_max_dB  n=45 ours: 0.022 (100%)  binned: 0.067 (80%)  pce: 0.018 (100%)  mlp+mc: 0.021 (100%)  linear: 0.026 (100%)
+S11_max_dB  n=60 ours: 0.018 (100%)  binned: 0.053 (100%)  pce: 0.014 (100%)  mlp+mc: 0.020 (100%)  linear: 0.021 (100%)
+S31_mean_dB n=30 ours: 0.008 (100%)  binned: 0.073 (100%)  pce: 0.008 (100%)  mlp+mc: 0.010 (100%)  linear: 0.021 (100%)
+S31_mean_dB n=45 ours: 0.008 (100%)  binned: 0.050 (100%)  pce: 0.007 (100%)  mlp+mc: 0.012 (100%)  linear: 0.015 (100%)
+S31_mean_dB n=60 ours: 0.006 (100%)  binned: 0.038 (100%)  pce: 0.007 (100%)  mlp+mc: 0.011 (100%)  linear: 0.014 (100%)
+iso_max_dB  n=30 ours: 0.016 (100%)  binned: 0.074 (50%)  pce: 0.018 (100%)  mlp+mc: 0.015 (100%)  linear: 0.028 (100%)
+iso_max_dB  n=45 ours: 0.015 (100%)  binned: 0.053 (60%)  pce: 0.016 (100%)  mlp+mc: 0.015 (100%)  linear: 0.027 (100%)
+iso_max_dB  n=60 ours: 0.015 (100%)  binned: 0.043 (60%)  pce: 0.015 (100%)  mlp+mc: 0.015 (100%)  linear: 0.022 (100%)
+saved results_head2head.json

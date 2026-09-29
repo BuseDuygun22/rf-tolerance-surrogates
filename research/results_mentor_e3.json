@@ -1,0 +1,22 @@
+{
+ "dataset_mean_today": {
+  "dk": 3.907938453374074,
+  "t_art1": 1.869229957816538,
+  "pass_pct": 32.129999999999995
+ },
+ "dataset_mean_redesign": {
+  "dk": 4.019412295098038,
+  "t_art1": 1.7669779457980515,
+  "pass_pct": 44.84
+ },
+ "sampled_bounds_centre_today": {
+  "dk": 3.9004479704999997,
+  "t_art1": 1.900052386761085,
+  "pass_pct": 30.81
+ },
+ "sampled_bounds_centre_redesign": {
+  "dk": 4.019412295098038,
+  "t_art1": 1.7669779457980515,
+  "pass_pct": 44.84
+ }
+}

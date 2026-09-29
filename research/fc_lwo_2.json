@@ -1,0 +1,13 @@
+{
+ "step": "+A7",
+ "n_window": 99,
+ "real_pct": 53.535353535353536,
+ "real_lo": 43.76291394106047,
+ "real_hi": 63.043670164982224,
+ "model_leave_out_pct": 56.946,
+ "inside": true,
+ "window_verdict_agreement": 89.8989898989899,
+ "n_matrices": 25124849,
+ "n_violations": 0,
+ "seconds": 480.89006876945496
+}

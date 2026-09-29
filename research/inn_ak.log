@@ -1,0 +1,17 @@
+seed0 ak     err@40=0.4pt err@80=1.1pt err@120=1.7pt  AK stop rule at None
+seed0 random err@40=1.3pt err@80=0.0pt err@120=0.7pt  AK stop rule at None
+seed1 ak     err@40=0.6pt err@80=0.2pt err@120=1.1pt  AK stop rule at None
+seed1 random err@40=0.7pt err@80=1.3pt err@120=0.9pt  AK stop rule at None
+seed2 ak     err@40=2.4pt err@80=1.5pt err@120=1.9pt  AK stop rule at None
+seed2 random err@40=4.6pt err@80=1.1pt err@120=0.7pt  AK stop rule at None
+seed3 ak     err@40=3.5pt err@80=1.1pt err@120=1.9pt  AK stop rule at None
+seed3 random err@40=1.3pt err@80=0.2pt err@120=0.7pt  AK stop rule at None
+seed4 ak     err@40=2.8pt err@80=0.9pt err@120=1.1pt  AK stop rule at None
+seed4 random err@40=1.7pt err@80=0.2pt err@120=0.4pt  AK stop rule at None
+seed5 ak     err@40=3.1pt err@80=2.0pt err@120=1.5pt  AK stop rule at None
+seed5 random err@40=0.2pt err@80=1.5pt err@120=1.5pt  AK stop rule at None
+seed6 ak     err@40=0.6pt err@80=1.1pt err@120=0.9pt  AK stop rule at None
+seed6 random err@40=0.2pt err@80=0.7pt err@120=0.2pt  AK stop rule at None
+seed7 ak     err@40=0.4pt err@80=2.0pt err@120=1.3pt  AK stop rule at None
+seed7 random err@40=0.0pt err@80=0.6pt err@120=0.2pt  AK stop rule at None
+saved results_inn_ak.json

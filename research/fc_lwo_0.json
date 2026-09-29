@@ -1,0 +1,13 @@
+{
+ "step": "today",
+ "n_window": 217,
+ "real_pct": 28.110599078341014,
+ "real_lo": 22.55013416863821,
+ "real_hi": 34.432608213231866,
+ "model_leave_out_pct": 29.772,
+ "inside": true,
+ "window_verdict_agreement": 89.86175115207374,
+ "n_matrices": 25154467,
+ "n_violations": 0,
+ "seconds": 252.03972029685974
+}

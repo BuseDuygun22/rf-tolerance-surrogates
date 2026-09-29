@@ -1,0 +1,44 @@
+{
+ "DK_above_p70": {
+  "cutoff": 3.9864385854999997,
+  "extrapolate": {
+   "mae_dB": [
+    0.0821,
+    0.037,
+    0.0808
+   ],
+   "pass_agreement": 0.9259259259259259,
+   "n_test": 162
+  },
+  "interpolate": {
+   "mae_dB": [
+    0.0733,
+    0.0319,
+    0.0713
+   ],
+   "pass_agreement": 0.9259259259259259,
+   "n_test": 162
+  }
+ },
+ "DK_above_p90": {
+  "cutoff": 4.0641969527,
+  "extrapolate": {
+   "mae_dB": [
+    0.0818,
+    0.0292,
+    0.0865
+   ],
+   "pass_agreement": 0.9629629629629629,
+   "n_test": 54
+  },
+  "interpolate": {
+   "mae_dB": [
+    0.0765,
+    0.035,
+    0.0751
+   ],
+   "pass_agreement": 0.9629629629629629,
+   "n_test": 54
+  }
+ }
+}

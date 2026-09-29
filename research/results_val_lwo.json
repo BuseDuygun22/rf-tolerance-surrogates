@@ -1,0 +1,87 @@
+[
+ {
+  "step": "today",
+  "n_window": 217,
+  "n_train": 323,
+  "real_pct": 28.110599078341014,
+  "real_lo": 22.55013416863821,
+  "real_hi": 34.432608213231866,
+  "model_leave_out_pct": 31.162,
+  "inside": true,
+  "window_pass_pred_pct": 25.806451612903224,
+  "window_verdict_agreement": 89.40092165898618,
+  "window_mae_dB": [
+   0.06981508837443617,
+   0.03298100430667329,
+   0.07746494230658559
+  ]
+ },
+ {
+  "step": "laminate",
+  "n_window": 225,
+  "n_train": 315,
+  "real_pct": 42.666666666666664,
+  "real_lo": 36.38038305130548,
+  "real_hi": 49.19916192653072,
+  "model_leave_out_pct": 42.986999999999995,
+  "inside": true,
+  "window_pass_pred_pct": 38.22222222222222,
+  "window_verdict_agreement": 92.88888888888889,
+  "window_mae_dB": [
+   0.08305388676454312,
+   0.03456649330558448,
+   0.07749113845426968
+  ]
+ },
+ {
+  "step": "+A7",
+  "n_window": 99,
+  "n_train": 441,
+  "real_pct": 53.535353535353536,
+  "real_lo": 43.76291394106047,
+  "real_hi": 63.043670164982224,
+  "model_leave_out_pct": 55.47,
+  "inside": true,
+  "window_pass_pred_pct": 50.505050505050505,
+  "window_verdict_agreement": 90.9090909090909,
+  "window_mae_dB": [
+   0.06439290440705986,
+   0.031484512071385605,
+   0.07360857620365464
+  ]
+ },
+ {
+  "step": "+A7+h",
+  "n_window": 52,
+  "n_train": 488,
+  "real_pct": 63.46153846153846,
+  "real_lo": 49.87142858480117,
+  "real_hi": 75.19948628869815,
+  "model_leave_out_pct": 63.63999999999999,
+  "inside": true,
+  "window_pass_pred_pct": 59.61538461538461,
+  "window_verdict_agreement": 88.46153846153845,
+  "window_mae_dB": [
+   0.06509807494042612,
+   0.02704429070962256,
+   0.07018061895674596
+  ]
+ },
+ {
+  "step": "+A7+h+A3",
+  "n_window": 30,
+  "n_train": 510,
+  "real_pct": 73.33333333333333,
+  "real_lo": 55.551697955688304,
+  "real_hi": 85.81750444608937,
+  "model_leave_out_pct": 83.268,
+  "inside": true,
+  "window_pass_pred_pct": 66.66666666666666,
+  "window_verdict_agreement": 80.0,
+  "window_mae_dB": [
+   0.06416678371676196,
+   0.029484698007099356,
+   0.06896641120453986
+  ]
+ }
+]

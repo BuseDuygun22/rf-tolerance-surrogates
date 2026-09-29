@@ -1,0 +1,13 @@
+{
+ "step": "laminate",
+ "n_window": 225,
+ "real_pct": 42.666666666666664,
+ "real_lo": 36.38038305130548,
+ "real_hi": 49.19916192653072,
+ "model_leave_out_pct": 46.585,
+ "inside": true,
+ "window_verdict_agreement": 88.88888888888889,
+ "n_matrices": 25156475,
+ "n_violations": 0,
+ "seconds": 252.8380618095398
+}

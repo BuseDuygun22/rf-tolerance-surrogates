@@ -1,0 +1,13 @@
+E5 S11_max_dB  540-run reference top: TOL_h=0.47, TOL_LW_A7=0.41, TOL_LW_A3=0.05, $DK=0.02   full-data closed form deviates 0.016
+E5   n=30 real runs: closed-form error 0.023 vs binned Monte Carlo 0.088;  top-2 drivers right 100% vs 90%  (variance guard 0.98-1.03)
+E5   n=45 real runs: closed-form error 0.022 vs binned Monte Carlo 0.067;  top-2 drivers right 100% vs 80%  (variance guard 0.99-1.04)
+E5   n=60 real runs: closed-form error 0.018 vs binned Monte Carlo 0.053;  top-2 drivers right 100% vs 100%  (variance guard 0.99-1.03)
+E5 S31_mean_dB 540-run reference top: TOL_LW_A7=0.55, TOL_LW_A3=0.44, $DK=0.01, TOL_LW_A9=0.00   full-data closed form deviates 0.005
+E5   n=30 real runs: closed-form error 0.008 vs binned Monte Carlo 0.073;  top-2 drivers right 100% vs 100%  (variance guard 0.97-1.01)
+E5   n=45 real runs: closed-form error 0.008 vs binned Monte Carlo 0.050;  top-2 drivers right 100% vs 100%  (variance guard 0.98-1.01)
+E5   n=60 real runs: closed-form error 0.006 vs binned Monte Carlo 0.038;  top-2 drivers right 100% vs 100%  (variance guard 0.98-1.01)
+E5 iso_max_dB  540-run reference top: $DK=0.62, TOL_h=0.19, TOL_LW_A7=0.06, TOL_LW_A3=0.02   full-data closed form deviates 0.014
+E5   n=30 real runs: closed-form error 0.016 vs binned Monte Carlo 0.074;  top-2 drivers right 100% vs 50%  (variance guard 0.96-1.02)
+E5   n=45 real runs: closed-form error 0.015 vs binned Monte Carlo 0.053;  top-2 drivers right 100% vs 60%  (variance guard 0.96-1.03)
+E5   n=60 real runs: closed-form error 0.015 vs binned Monte Carlo 0.043;  top-2 drivers right 100% vs 60%  (variance guard 0.96-1.03)
+saved e5

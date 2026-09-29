@@ -1,0 +1,36 @@
+{
+ "kpi": [
+  "S11_max_dB",
+  "S21_mean_dB",
+  "S31_mean_dB",
+  "iso_max_dB",
+  "S21_ripple_dB"
+ ],
+ "real_pass_fraction": 0.2722222222222222,
+ "joint": {
+  "mae_dB": {
+   "S11_max_dB": 0.0732,
+   "S21_mean_dB": 0.0279,
+   "S31_mean_dB": 0.0338,
+   "iso_max_dB": 0.0742,
+   "S21_ripple_dB": 0.0525
+  },
+  "pass_agreement": 0.9314814814814815,
+  "predicted_pass_fraction": 0.26666666666666666,
+  "false_pass": 17,
+  "false_fail": 20
+ },
+ "separate": {
+  "mae_dB": {
+   "S11_max_dB": 0.0721,
+   "S21_mean_dB": 0.0276,
+   "S31_mean_dB": 0.0335,
+   "iso_max_dB": 0.074,
+   "S21_ripple_dB": 0.0505
+  },
+  "pass_agreement": 0.9296296296296296,
+  "predicted_pass_fraction": 0.26481481481481484,
+  "false_pass": 17,
+  "false_fail": 21
+ }
+}

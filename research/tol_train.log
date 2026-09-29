@@ -1,0 +1,6 @@
+trained 5 per-KPI models on 540 designs in 234.4s
+  S11_max_dB     5.97**2 * Matern(length_scale=[22.2, 1e+03, 1e+03, 1e+03, 1e+03, 36.8, 1e+03, 19, 329, 19.3, 1e+03], nu=2.5) + WhiteKernel(noise_level=0.0442)
+  S21_mean_dB    5.56**2 * Matern(length_scale=[14, 1e+03, 1e+03, 1e+03, 590, 25.9, 1e+03, 17.1, 421, 17.5, 1e+03], nu=2.5) + WhiteKernel(noise_level=0.0362)
+  S31_mean_dB    5.49**2 * Matern(length_scale=[18.1, 1e+03, 1e+03, 1e+03, 1e+03, 22.8, 1e+03, 19.5, 815, 38.5, 804], nu=2.5) + WhiteKernel(noise_level=0.011)
+  iso_max_dB     4.63**2 * Matern(length_scale=[13.5, 1e+03, 911, 264, 718, 63, 1e+03, 24.2, 45.8, 16.9, 180], nu=2.5) + WhiteKernel(noise_level=0.0249)
+  S21_ripple_dB  3.42**2 * Matern(length_scale=[2.49, 249, 1e+03, 1e+03, 1e+03, 17.2, 207, 16.5, 17.5, 9.26, 1e+03], nu=2.5) + WhiteKernel(noise_level=0.0372)

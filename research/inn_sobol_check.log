@@ -1,0 +1,3 @@
+S11_max_dB   closed-form 322 ms vs MC 1.9 s (53248 evals); max |dST| = 0.0000; top: TOL_h=0.513, TOL_LW_A7=0.381, TOL_LW_A3=0.105
+S31_mean_dB  closed-form 300 ms vs MC 2.0 s (53248 evals); max |dST| = 0.0001; top: TOL_LW_A7=0.535, TOL_LW_A3=0.455, TOL_h=0.009
+iso_max_dB   closed-form 292 ms vs MC 1.6 s (53248 evals); max |dST| = 0.0000; top: TOL_h=0.549, $DK=0.224, TOL_LW_A7=0.154

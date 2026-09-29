@@ -1,0 +1,32 @@
+{
+ "S11_max_dB_n45": {
+  "coverage_all_params": 0.43636363636363634,
+  "coverage_top3": 0.9333333333333332,
+  "mean_interval_width_top3": 0.16287691984791647
+ },
+ "S11_max_dB_n60": {
+  "coverage_all_params": 0.43636363636363634,
+  "coverage_top3": 0.9333333333333332,
+  "mean_interval_width_top3": 0.16117302129661823
+ },
+ "S31_mean_dB_n45": {
+  "coverage_all_params": 0.509090909090909,
+  "coverage_top3": 0.9333333333333333,
+  "mean_interval_width_top3": 0.10937018182125684
+ },
+ "S31_mean_dB_n60": {
+  "coverage_all_params": 0.4727272727272728,
+  "coverage_top3": 0.7333333333333334,
+  "mean_interval_width_top3": 0.07854970133116224
+ },
+ "iso_max_dB_n45": {
+  "coverage_all_params": 0.6363636363636364,
+  "coverage_top3": 1.0,
+  "mean_interval_width_top3": 0.13134916282493284
+ },
+ "iso_max_dB_n60": {
+  "coverage_all_params": 0.5999999999999999,
+  "coverage_top3": 0.8666666666666666,
+  "mean_interval_width_top3": 0.10964334915204396
+ }
+}

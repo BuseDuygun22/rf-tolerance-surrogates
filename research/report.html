@@ -1,0 +1,510 @@
+<title>Touchstone Dataset Findings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F4F6F8;
+  --surface:#FFFFFF;
+  --ink:#111820;
+  --ink-soft:#4A5661;
+  --ink-faint:#78868F;
+  --rule:#D6DDE3;
+  --rule-soft:#E6EBEF;
+  --trace:#0E7C86;
+  --trace-deep:#0A5A62;
+  --trace-wash:#E3F1F2;
+  --good:#2F7D4F;
+  --warn:#9A6B12;
+  --stop:#A8392F;
+  --good-wash:#E6F1EA;
+  --warn-wash:#F6EDDC;
+  --stop-wash:#F6E6E4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1114;
+    --surface:#141B20;
+    --ink:#E8EEF1;
+    --ink-soft:#A7B4BC;
+    --ink-faint:#77858E;
+    --rule:#27333A;
+    --rule-soft:#1C252B;
+    --trace:#3FB8C0;
+    --trace-deep:#7FD6DB;
+    --trace-wash:#12292C;
+    --good:#66BC8A;
+    --warn:#D2A24A;
+    --stop:#E0776B;
+    --good-wash:#16241C;
+    --warn-wash:#251E10;
+    --stop-wash:#271816;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C1114;
+  --surface:#141B20;
+  --ink:#E8EEF1;
+  --ink-soft:#A7B4BC;
+  --ink-faint:#77858E;
+  --rule:#27333A;
+  --rule-soft:#1C252B;
+  --trace:#3FB8C0;
+  --trace-deep:#7FD6DB;
+  --trace-wash:#12292C;
+  --good:#66BC8A;
+  --warn:#D2A24A;
+  --stop:#E0776B;
+  --good-wash:#16241C;
+  --warn-wash:#251E10;
+  --stop-wash:#271816;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.62;
+  padding-block:0 72px;
+  padding-left:20px;padding-right:20px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:38px}
+.col{max-width:65ch}
+
+h1,h2,h3,.eyebrow,.lab,th,.chip,.num{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+
+header{padding-block:56px 8px;border-bottom:2px solid var(--ink);display:flex;flex-direction:column;gap:14px}
+.eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--trace);display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;
+}
+.eyebrow span{color:var(--ink-faint)}
+h1{font-size:clamp(30px,5.4vw,44px);font-weight:700;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.018em}
+.standfirst{font-size:19px;color:var(--ink-soft);margin:0;max-width:60ch}
+.meta{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--ink-faint);
+  display:flex;flex-wrap:wrap;gap:6px 20px;padding-bottom:18px;
+}
+
+section{display:flex;flex-direction:column;gap:18px}
+h2{
+  font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  margin:0;color:var(--ink);display:flex;align-items:baseline;gap:12px;
+}
+h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+h3{font-size:18px;font-weight:600;margin:0;letter-spacing:-.005em}
+p{margin:0}
+.col p + p{margin-top:14px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;max-width:65ch}
+li::marker{color:var(--trace)}
+code,.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em}
+code{background:var(--rule-soft);padding:1px 5px;border-radius:3px;color:var(--trace-deep)}
+
+/* verdict rail */
+.verdict{
+  display:flex;gap:16px;padding:16px 18px;border-radius:2px;
+  border-left:3px solid var(--trace);background:var(--surface);
+}
+.verdict.no{border-left-color:var(--stop);background:var(--stop-wash)}
+.verdict.yes{border-left-color:var(--good);background:var(--good-wash)}
+.verdict.care{border-left-color:var(--warn);background:var(--warn-wash)}
+.verdict .lab{
+  font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  flex:0 0 84px;padding-top:4px;color:var(--ink-soft);
+}
+.verdict p{font-size:16px}
+
+/* tables */
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:2px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+caption{
+  caption-side:top;text-align:left;padding:12px 14px 10px;font-size:12px;color:var(--ink-faint);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;border-bottom:1px solid var(--rule-soft);
+}
+th{
+  font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  text-align:right;padding:10px 14px;color:var(--ink-soft);border-bottom:1px solid var(--rule);
+}
+th:first-child{text-align:left}
+td{padding:9px 14px;text-align:right;border-bottom:1px solid var(--rule-soft);font-variant-numeric:tabular-nums;
+   font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px}
+td:first-child{text-align:left;font-family:"Source Serif 4",serif;font-size:15px}
+tbody tr:last-child td{border-bottom:none}
+tr.win td{background:var(--trace-wash)}
+tr.win td:first-child::after{content:" ●";color:var(--trace);font-size:10px;vertical-align:middle}
+
+/* figure */
+figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.figbox{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:2px;padding:10px}
+figcaption{font-size:13px;color:var(--ink-faint);max-width:62ch}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;font-family:"IBM Plex Mono",monospace;color:var(--ink-soft)}
+.legend i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin-right:6px}
+
+/* stat row */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.stat{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:3px}
+.stat .num{font-size:25px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat .lab{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.stat .sub{font-size:12.5px;color:var(--ink-soft)}
+
+/* param list */
+.params{display:flex;flex-direction:column;border:1px solid var(--rule);border-radius:2px;background:var(--surface)}
+.prow{display:grid;grid-template-columns:minmax(120px,1.1fr) minmax(90px,.8fr) 2fr;gap:14px;padding:10px 16px;border-bottom:1px solid var(--rule-soft);align-items:baseline}
+.prow:last-child{border-bottom:none}
+.prow .k{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--trace-deep);font-weight:500}
+.prow .r{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.prow .d{font-size:14.5px;color:var(--ink-soft)}
+.prow.head{background:var(--rule-soft)}
+.prow.head span{font-family:Archivo,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+
+.qlist{counter-reset:q;display:flex;flex-direction:column;gap:14px}
+.q{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start}
+.q::before{
+  counter-increment:q;content:counter(q);
+  font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--trace);
+  border:1px solid var(--rule);border-radius:50%;width:26px;height:26px;
+  display:grid;place-items:center;margin-top:2px;
+}
+.q p{font-size:16px}
+.q b{font-weight:600;font-family:Archivo,sans-serif;font-size:15px}
+
+footer{border-top:1px solid var(--rule);padding-top:18px;font-size:13px;color:var(--ink-faint);max-width:65ch}
+footer a{color:var(--trace-deep)}
+
+@media (max-width:560px){
+  .prow{grid-template-columns:1fr;gap:3px}
+  body{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Huawei Tech Arena 2026 <span>/</span> Sub-topic 3 <span>/</span> Data review</div>
+  <h1>What the touchstone dataset will and will not support</h1>
+  <p class="standfirst">A read of the 540-design, 3-port S-parameter set Huawei supplied, the physics it already obeys, and a benchmark of five surrogate families run on it. One part of the earlier plan does not survive contact with this data, and the winning model needs only 60 of the 540 designs.</p>
+  <div class="meta">
+    <span>all_touchstone_with_bounds_params_real_imag.csv</span>
+    <span>74.0 MB</span>
+    <span>135,540 rows</span>
+  </div>
+</header>
+
+<section>
+  <h2>The file</h2>
+  <div class="col">
+    <p>Every row is one design at one frequency. There are 540 designs, each swept over the same 251-point frequency grid running from 1.2 to 1.7 GHz in uniform 2 MHz steps. The eleven parameter columns are constant within a design, so the file is a wide-format expansion of a 540-row design table. There are no missing values and no repeated designs.</p>
+    <p>The response is a full 3-port scattering matrix stored as nine real and nine imaginary columns. Port 1 feeds a through path to port 2 at about <span class="mono">&minus;2.4 dB</span> and a coupled path to port 3 at about <span class="mono">&minus;12.9 dB</span>, with port 2 to port 3 isolation near <span class="mono">&minus;25 dB</span> and a single return-loss resonance close to 1.45 GHz. That signature, together with three chip-resistor values in the parameter list, reads as a resistively loaded directional coupler or tap on a laminate of dielectric constant near 3.9.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="lab">Designs</span><span class="num">540</span><span class="sub">unique, no duplicates</span></div>
+    <div class="stat"><span class="lab">Frequencies</span><span class="num">251</span><span class="sub">1.2&ndash;1.7 GHz, 2 MHz step</span></div>
+    <div class="stat"><span class="lab">Inputs</span><span class="num">11</span><span class="sub">independent, near-uniform</span></div>
+    <div class="stat"><span class="lab">Response dims</span><span class="num">3,012</span><span class="sub">6 unique S entries &times; re/im &times; f</span></div>
+  </div>
+
+  <div class="params">
+    <div class="prow head"><span>Column</span><span>Range</span><span>What it is</span></div>
+    <div class="prow"><span class="k">$DK</span><span class="r">3.701 &ndash; 4.100</span><span class="d">Substrate dielectric constant</span></div>
+    <div class="prow"><span class="k">$R0402_1</span><span class="r">1089 &ndash; 1111 &#8486;</span><span class="d">Chip resistor, 0402 footprint</span></div>
+    <div class="prow"><span class="k">$R0402_2</span><span class="r">338.6 &ndash; 345.4 &#8486;</span><span class="d">Chip resistor, 0402 footprint</span></div>
+    <div class="prow"><span class="k">$R0402_RL</span><span class="r">49.50 &ndash; 50.50 &#8486;</span><span class="d">Reference load, nominally 50 &#8486;</span></div>
+    <div class="prow"><span class="k">TOL_LW_A1 … A9</span><span class="r">&minus;1.00 &ndash; +1.00</span><span class="d">Normalised line-width deviation on five trace segments</span></div>
+    <div class="prow"><span class="k">TOL_h</span><span class="r">0.900 &ndash; 1.100</span><span class="d">Substrate thickness multiplier</span></div>
+    <div class="prow"><span class="k">t_art1</span><span class="r">1.400 &ndash; 2.400</span><span class="d">Conductor thickness, units not stated</span></div>
+  </div>
+
+  <div class="col">
+    <p>The eleven parameters are drawn independently and close to uniform across their ranges. A Kolmogorov&ndash;Smirnov test against a uniform marginal clears every column, and the largest correlation between any two parameters is 0.095. The <code>TOL_</code> prefix and the symmetric &plusmn;1 coding say plainly what this is: a manufacturing-tolerance study, sampled by Monte Carlo or Latin hypercube around an undisclosed nominal design.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Physics the data already obeys</h2>
+  <div class="col">
+    <p>Three properties hold across all 135,540 rows, and each one is a constraint a model can be built to respect rather than made to learn.</p>
+  </div>
+  <ul>
+    <li><b>Reciprocity is exact.</b> The largest deviation of the scattering matrix from its own transpose is <span class="mono">2.3&times;10&#8315;&sup1;&sup1;</span>, which is solver round-off. Only six of the nine entries carry information, so the honest response dimension is 3,012 rather than 4,518.</li>
+    <li><b>The device is passive everywhere.</b> The largest singular value of the scattering matrix over the entire file is 0.9949, and no row exceeds one. The structure is lossy, so the efficiencies do not sum to one and no unitarity constraint applies.</li>
+    <li><b>The frequency response is smooth.</b> Each design shows about one return-loss resonance in band, and 99.5% of the spectral energy of the through path sits in the first ten Fourier modes along frequency. Nothing here needs a fine frequency mesh to represent.</li>
+  </ul>
+  <div class="col">
+    <p>That smoothness has a consequence worth stating on its own. A principal-component decomposition of the 3,012-dimensional response finds that one component explains 87.3% of the variance, three explain 97.2%, and twenty explain 99.89%. The responses of all 540 designs lie on a manifold of roughly twenty dimensions. Regressing 3,012 numbers from eleven inputs is the wrong framing of the problem.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Which parameters actually move the device</h2>
+  <div class="col">
+    <p>A Sobol variance decomposition, run through the surrogate described below, attributes the in-band worst-case return loss almost entirely to two parameters. Substrate thickness and the line width of segment A7 together account for about 89% of the total-effect variance. The three resistor values are inert across every response metric measured, each below 0.02.</p>
+  </div>
+  <figure>
+    <div class="figbox">
+      <svg viewBox="0 0 700 330" width="700" role="img" aria-label="Total-effect Sobol sensitivity indices for worst-case in-band return loss">
+        <line x1="130" y1="14" x2="130" y2="306" stroke="var(--rule)" stroke-width="1"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-faint)">
+          <text x="130" y="324" text-anchor="middle">0</text>
+          <text x="323" y="324" text-anchor="middle">0.20</text>
+          <text x="515" y="324" text-anchor="middle">0.40</text>
+          <text x="660" y="324" text-anchor="middle">0.55</text>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--ink-soft)" text-anchor="end">
+          <text x="120" y="30">TOL_h</text>
+          <text x="120" y="56">TOL_LW_A7</text>
+          <text x="120" y="82">TOL_LW_A3</text>
+          <text x="120" y="108">$DK</text>
+          <text x="120" y="134">TOL_LW_A9</text>
+          <text x="120" y="160">t_art1</text>
+          <text x="120" y="186">TOL_LW_A1</text>
+          <text x="120" y="212">TOL_LW_A5</text>
+          <text x="120" y="238">$R0402_1</text>
+          <text x="120" y="264">$R0402_RL</text>
+          <text x="120" y="290">$R0402_2</text>
+        </g>
+        <g fill="var(--trace)">
+          <rect x="130" y="18" width="500" height="15"/>
+          <rect x="130" y="44" width="356" height="15"/>
+          <rect x="130" y="70" width="97" height="15"/>
+        </g>
+        <g fill="var(--ink-faint)">
+          <rect x="130" y="96" width="41" height="15"/>
+          <rect x="130" y="122" width="20" height="15"/>
+          <rect x="130" y="148" width="17" height="15"/>
+          <rect x="130" y="174" width="15" height="15"/>
+          <rect x="130" y="200" width="14" height="15"/>
+          <rect x="130" y="226" width="13" height="15"/>
+          <rect x="130" y="252" width="13" height="15"/>
+          <rect x="130" y="278" width="11" height="15"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink)" >
+          <text x="640" y="30">0.519</text>
+          <text x="496" y="56">0.369</text>
+          <text x="237" y="82">0.101</text>
+          <text x="181" y="108" fill="var(--ink-faint)">0.042</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Total-effect Sobol indices for worst-case in-band return loss, from 53,248 surrogate evaluations under a Saltelli design. Isolation is driven instead by dielectric constant at 0.649; coupling is driven by segments A7 and A3 at 0.518 and 0.454.</figcaption>
+  </figure>
+  <div class="verdict care">
+    <span class="lab">Read this</span>
+    <p>The effective input dimension is about four, not eleven. That is why 540 designs is a comfortable budget here, and it is also the first result worth putting in front of a jury: it tells a manufacturing engineer which two dimensions to tighten and which seven to stop paying for.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Where the earlier plan breaks</h2>
+  <div class="col">
+    <p>The plan I sketched before seeing the data assumed a structure you would design and simulate yourself, with fields on a spatial grid. This dataset is a different object, and two parts of that plan have to be dropped rather than adapted.</p>
+  </div>
+  <div class="verdict no">
+    <span class="lab">Not viable</span>
+    <p><b>A physics-informed neural network in the Maxwell-residual sense.</b> A residual loss needs field values at spatial coordinates so that automatic differentiation can evaluate the curl equations. This file contains eleven scalars and a port response. There is no geometry, no mesh, and no field anywhere in it, so no Maxwell residual can be formed. Any entry claiming a Maxwell-informed loss trained on this data would not survive a question from the jury.</p>
+  </div>
+  <div class="verdict no">
+    <span class="lab">Not viable</span>
+    <p><b>Inverse design of geometry.</b> The parameters are manufacturing deviations and component values around a nominal that is not disclosed, not a shape parameterisation. You can re-centre the design within the sampled box. You cannot synthesise a new topology from this file.</p>
+  </div>
+  <div class="verdict yes">
+    <span class="lab">Viable</span>
+    <p><b>Everything the second Huawei KPI asks for.</b> The brief names sensitivity analysis against conventional Monte Carlo as a scoring criterion, and this dataset was built for exactly that. Physics consistency enters through the scattering matrix rather than through the fields: reciprocity by construction, passivity and causality as verifiable properties of the prediction. That reframing is defensible, it is supported by published work on constrained S-parameter macromodels, and it keeps the physics-consistency theme the brief asks for.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Benchmark on your data</h2>
+  <div class="col">
+    <p>Splits are taken over designs, never over rows, so no frequency point of a held-out design appears in training. Each configuration is run over five random splits with 140 designs held out. The response compression is fitted on the training designs only. Errors are reported on the reconstructed scattering matrix, as relative L2 over the whole matrix and as mean absolute decibel error on individual paths.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Five surrogate families, mean over 5 splits, 140 held-out designs</caption>
+      <thead><tr><th>Model</th><th>60 designs</th><th>120</th><th>240</th><th>400</th><th>S11 err, dB</th><th>Train, s</th></tr></thead>
+      <tbody>
+        <tr class="win"><td>Kriging, ARD Matérn</td><td>0.0435</td><td>0.0313</td><td>0.0220</td><td>0.0145</td><td>0.204</td><td>40.3</td></tr>
+        <tr><td>Gradient boosting</td><td>0.0508</td><td>0.0315</td><td>0.0228</td><td>0.0209</td><td>0.269</td><td>47.2</td></tr>
+        <tr><td>Ridge, linear</td><td>0.0636</td><td>0.0363</td><td>0.0271</td><td>0.0246</td><td>0.295</td><td>0.014</td></tr>
+        <tr><td>MLP, data-driven</td><td>0.0423</td><td>0.0383</td><td>0.0317</td><td>0.0278</td><td>0.353</td><td>6.0</td></tr>
+        <tr><td>Quadratic + ridge</td><td>0.0988</td><td>0.0677</td><td>0.0410</td><td>0.0259</td><td>0.304</td><td>0.043</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <figure>
+    <div class="figbox">
+      <svg viewBox="0 0 700 350" width="700" role="img" aria-label="Relative L2 error against number of training designs for five surrogate families">
+        <g stroke="var(--rule-soft)" stroke-width="1">
+          <line x1="70" y1="30" x2="620" y2="30"/>
+          <line x1="70" y1="111" x2="620" y2="111"/>
+          <line x1="70" y1="219" x2="620" y2="219"/>
+          <line x1="70" y1="300" x2="620" y2="300"/>
+        </g>
+        <line x1="70" y1="30" x2="70" y2="300" stroke="var(--rule)"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-faint)" text-anchor="end">
+          <text x="62" y="34">10%</text>
+          <text x="62" y="115">5%</text>
+          <text x="62" y="223">2%</text>
+          <text x="62" y="304">1%</text>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-faint)" text-anchor="middle">
+          <text x="70" y="322">60</text>
+          <text x="271" y="322">120</text>
+          <text x="472" y="322">240</text>
+          <text x="620" y="322">400</text>
+          <text x="345" y="342" fill="var(--ink-soft)">training designs</text>
+        </g>
+        <g fill="none" stroke-width="2">
+          <polyline stroke="var(--trace)" stroke-width="2.6" points="70,128 271,166 472,208 620,256"/>
+          <polyline stroke="var(--ink-faint)" points="70,109 271,166 472,203 620,214"/>
+          <polyline stroke="var(--warn)" points="70,131 271,143 472,165 620,180"/>
+          <polyline stroke="var(--good)" points="70,83 271,149 472,183 620,195"/>
+          <polyline stroke="var(--stop)" points="70,31 271,76 472,135 620,188"/>
+          <polyline stroke="var(--trace)" stroke-width="3.4" stroke-dasharray="7 4" points="70,245 271,254"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--trace)">
+          <text x="285" y="258">kriging, uncompressed</text>
+        </g>
+        <g fill="var(--trace)">
+          <circle cx="70" cy="128" r="3.6"/><circle cx="271" cy="166" r="3.6"/><circle cx="472" cy="208" r="3.6"/><circle cx="620" cy="256" r="3.6"/>
+        </g>
+      </svg>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--trace)"></i>Kriging, compressed</span>
+      <span><i style="background:var(--ink-faint)"></i>Gradient boosting</span>
+      <span><i style="background:var(--warn)"></i>MLP</span>
+      <span><i style="background:var(--good)"></i>Ridge</span>
+      <span><i style="background:var(--stop)"></i>Quadratic</span>
+    </div>
+    <figcaption>Relative L2 error on the held-out scattering matrix, logarithmic on both axes. Kriging is the only compressed family whose error keeps falling at the full training budget. The dashed line is the same model without the response compression, which at 60 training designs already sits below every compressed model at 400.</figcaption>
+  </figure>
+
+  <div class="col">
+    <p>Read this table with one caveat, because it turned out to matter more than the choice of model. Every family here was handed the response in compressed form, as twenty principal components. That step was mine, not the data's, and it was the wrong call.</p>
+  </div>
+  <ul>
+    <li><b>Among the compressed models, kriging wins and keeps improving.</b> At 400 training designs it reaches 1.45% relative error and 0.20 dB on return loss, and it is the only one of the five still learning at that budget.</li>
+    <li><b>Plain linear ridge comes within a factor of 1.7 of it</b>, trains in 14 milliseconds, and beats the neural network at every budget above 60. Over the sampled tolerance box the response is close to linear in the parameters. A proposal that reaches for a deep model without showing this baseline is leaving itself open.</li>
+    <li><b>The compression, not the regressor, was the binding constraint.</b> Removing it improves kriging by a factor of about 2.8, and the neural network by a smaller margin in all twenty paired runs. The tables below isolate that effect.</li>
+  </ul>
+
+  <div class="col">
+    <h3>Removing the compression</h3>
+    <p>Truncating at twenty principal components discards only 0.10% of the variance, and its own reconstruction floor is 0.47% relative error, far below what any model reached. Truncation loss therefore does not explain the gap. The cause is the regressor. One Gaussian process fits a single shared set of length scales across all of its outputs, and principal components differ sharply in smoothness, so a shared kernel is badly mis-specified for them. The 3,012 raw outputs are the same physical quantity at neighbouring frequencies and share a smoothness, so the shared kernel suits them. Pushing to eighty components makes matters worse still, which is the same effect amplified.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Kriging with and without response compression, mean over 2 splits, 140 held-out designs</caption>
+      <thead><tr><th>Variant</th><th>60 designs</th><th>120 designs</th><th>S11 err at 60, dB</th><th>Train at 120, s</th></tr></thead>
+      <tbody>
+        <tr><td>Compressed, 20 components</td><td>0.0437</td><td>0.0314</td><td>0.463</td><td>2.8</td></tr>
+        <tr><td>Compressed, 80 components</td><td>0.1275</td><td>0.1160</td><td>1.301</td><td>11.1</td></tr>
+        <tr class="win"><td>Uncompressed, 3,012 outputs</td><td>0.0160</td><td>0.0148</td><td>0.224</td><td>285.5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="verdict yes">
+    <span class="lab">Best result</span>
+    <p>Uncompressed kriging trained on 60 designs is more accurate than any compressed model trained on 400. That is a sixfold cut in the simulation budget, and it lands squarely on the data-availability and training-cost challenges the brief names. The price is training time, which rises from seconds to about five minutes, and which does not matter because it is paid once.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Neural variants and physics constraints, mean over 5 splits, 140 held-out designs</caption>
+      <thead><tr><th>Variant</th><th>Rel. L2</th><th>S11 err, dB</th><th>Passivity violations</th><th>Max σ</th><th>Train, s</th></tr></thead>
+      <tbody>
+        <tr class="win"><td>Uncompressed MLP, 60 designs</td><td>0.0295</td><td>0.358</td><td>0 of 140</td><td>0.9857</td><td>23.0</td></tr>
+        <tr><td>Compressed MLP, 60 designs</td><td>0.0347</td><td>0.411</td><td>0 of 140</td><td>0.9827</td><td>17.4</td></tr>
+        <tr class="win"><td>Uncompressed MLP, 120 designs</td><td>0.0242</td><td>0.305</td><td>0 of 140</td><td>0.9795</td><td>19.3</td></tr>
+        <tr><td>Compressed MLP, 120 designs</td><td>0.0292</td><td>0.343</td><td>0 of 140</td><td>0.9824</td><td>18.7</td></tr>
+        <tr class="win"><td>Uncompressed MLP, 400 designs</td><td>0.0209</td><td>0.288</td><td>0 of 140</td><td>0.9817</td><td>21.2</td></tr>
+        <tr><td>Compressed MLP, 400 designs</td><td>0.0240</td><td>0.306</td><td>0 of 140</td><td>0.9719</td><td>20.7</td></tr>
+        <tr><td>+ soft passivity penalty, 120</td><td>0.0296</td><td>0.342</td><td>0 of 140</td><td>0.9826</td><td>592.9</td></tr>
+        <tr><td>+ hard passivity projection, 120</td><td>0.0296</td><td>0.342</td><td>0 of 140</td><td>0.9825</td><td>575.6</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="verdict care">
+    <span class="lab">Negative result</span>
+    <p>The passivity constraint is inert on this device, and that is worth reporting rather than hiding. No model at any training budget produced a single non-passive prediction, and the largest singular value seen across every run was 0.986 against a limit of 1. The soft penalty and the hard projection both left the error unchanged to four decimals while raising training time from about 19 seconds to roughly ten minutes, a factor of thirty. A physics constraint pays only where the unconstrained model actually violates it, and on a lossy component sitting well inside the passive set it never does. The same table carries a second and more consequential result: the uncompressed network beat the compressed one in all twenty paired runs, at every budget and on every split.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What the surrogate then buys you</h2>
+  <div class="col">
+    <p>Both Huawei KPIs are about cost, not only accuracy, so the demonstrations below are timed. The surrogate used for these runs is the compressed neural model, trained on all 540 designs in 13.7 seconds on a laptop GPU and verified beforehand on 140 held-out designs at 2.5% relative error and 0.31 dB on return loss. It was chosen for throughput rather than accuracy, since these sweeps need millions of evaluations. The kriging models recommended below are more accurate, and the scalar one is fast enough to replace it here. Its error on the engineering metrics that matter is smaller still: worst-case return loss to 0.11 dB, isolation to 0.12 dB.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="lab">Sobol study</span><span class="num">53,248</span><span class="sub">evaluations in 1.74 s</span></div>
+    <div class="stat"><span class="lab">Monte Carlo yield</span><span class="num">100,000</span><span class="sub">evaluations in 3.19 s</span></div>
+    <div class="stat"><span class="lab">Design centering</span><span class="num">8.0 M</span><span class="sub">evaluations in 150 s</span></div>
+    <div class="stat"><span class="lab">Yield recovered</span><span class="num">39.5 → 87.5%</span><span class="sub">under an illustrative spec</span></div>
+  </div>
+
+  <div class="col">
+    <p>The sensitivity study and the yield estimate together came to 153,248 evaluations and 18.6 seconds including training. The same study run directly on a full-wave solver is a function of the solver cost per design, which Huawei has not stated. At ten seconds per design it is 17.7 days; at sixty seconds it is 106 days; at five minutes it is 532 days. Those correspond to speed factors of roughly 82,000, 495,000 and 2.5 million. Quote the solver cost alongside every one of these numbers, because the ratio is meaningless without it.</p>
+    <p>The design-centering run is the more interesting demonstration. Splitting the eleven parameters into eight a designer controls, the five line widths and three resistor values, and three the process imposes, dielectric constant, substrate thickness and conductor thickness, then optimising the controllable set to maximise the probability of meeting spec, moved yield from 39.5% to 87.5%. That took eight million surrogate evaluations in two and a half minutes and no additional solver runs at all. Published feature-based methods report moving yield from about 80% to over 90% at a cost of roughly a hundred electromagnetic simulations, so the result is in credible territory.</p>
+  </div>
+
+  <div class="verdict care">
+    <span class="lab">Caveat</span>
+    <p>Two of the optimised line widths sit hard against the edge of the sampled box, at &minus;0.994 and +0.994. The surrogate has no evidence beyond that boundary, and an optimiser will happily exploit a model where it is least constrained. The centred design must be confirmed in the real solver before it is claimed, and the acceptance spec used here was chosen near the median of the supplied population because Huawei supplied none.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What the literature supports</h2>
+  <div class="col">
+    <p>The search set out to find what has actually worked on this class of problem rather than what is most cited. Four findings changed the plan.</p>
+  </div>
+  <ul>
+    <li><b>Kriging is the most-reported surrogate family for radio-frequency and microwave components</b>, ahead of neural networks, in a recent systematic review of surrogate-based electromagnetic design. Our benchmark independently reproduces that ordering on your data, which is the kind of agreement worth showing.</li>
+    <li><b>Hard physics constraints beat soft penalties when the constraint binds.</b> Work on lossless periodic structures enforces energy conservation by projecting network outputs onto a manifold rather than penalising violations, and reports constraint error of 10&#8315;&#8310; against 10&#8315;&sup2; for an unconstrained network of identical architecture, at equal accuracy. The mechanism is sound. On your lossy, already-passive device the constraint simply never binds.</li>
+    <li><b>Causality and passivity enforcement for neural S-parameter models is established prior art</b>, and rational pole-residue fitting preserves causality, stability and passivity by construction. That is the physics-consistency route that fits this data, and it is a stronger encoding than the principal-component compression used here.</li>
+    <li><b>Physics-informed networks fail through spectral bias and loss imbalance</b>, and a recent analysis argues the failures are ordinary overfitting best treated with ordinary regularisation. This matters mainly as a reason not to promise Maxwell-residual training you cannot demonstrate.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Recommendation</h2>
+  <div class="verdict yes">
+    <span class="lab">Build this</span>
+    <p>A Gaussian-process surrogate fitted directly to the uncompressed response, with reciprocity imposed by the six-entry encoding and passivity checked rather than trained, wrapped in an active-learning loop that adds designs where the predictive variance is highest. Deliver the Sobol decomposition, the Monte Carlo yield estimate and the design-centering result as the three timed demonstrations.</p>
+  </div>
+
+  <div class="col">
+    <p>The evidence for that choice is not that Gaussian processes are fashionable. They are the most-reported family in the review literature, they won every training budget in the benchmark once the compression was removed, and they carry a predictive variance that the active-learning loop needs and no other family here provides for free. The strongest single number in this report is theirs: 60 designs, 1.60% relative error, 0.22 dB on return loss.</p>
+    <p>One practical split is worth building in. Kriging on the full response is the accuracy champion but is too heavy to evaluate millions of times, because each prediction carries all 3,012 outputs. The yield and sensitivity studies never need the full curve, only the handful of scalar metrics the specification is written against. Fitted directly to those five scalars, kriging predicts worst-case return loss to 0.093 dB from 60 designs, trains in 1.2 seconds and answers in 15 microseconds. Use the scalar model for the large statistical sweeps and the full-response model when someone needs to see the curve.</p>
+    <p>One addition is worth the risk, and it is the part that would distinguish the entry. Replace the principal-component compression with a rational pole-residue encoding of the frequency response, fitted by vector fitting, and regress the poles and residues instead. The response carries about one resonance and 99.5% of its energy in ten Fourier modes, so a low-order rational model should fit it tightly, and unlike the principal-component basis it makes causality and stability structural rather than incidental. That is a genuine physics-consistency claim on data that cannot support a Maxwell-residual one. Build the Gaussian-process pipeline first so you have a working entry, then attempt this.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Ask Huawei these before building</h2>
+  <div class="qlist">
+    <div class="q"><p><b>What does one full-wave simulation of this component cost?</b> Every speed claim in the brief is a ratio against that number, and without it the strongest result in this report cannot be stated.</p></div>
+    <div class="q"><p><b>What is the acceptance specification?</b> The yield figures above use thresholds chosen near the population median because none was supplied. A real mask changes the yield numbers and the centred design.</p></div>
+    <div class="q"><p><b>Which parameters are design choices and which are process noise?</b> The split assumed here, line widths and resistors controllable against dielectric constant, substrate thickness and conductor thickness imposed, is a guess that decides the whole centering study.</p></div>
+    <div class="q"><p><b>What is the nominal design the tolerances perturb?</b> The line-width columns are deviations from a value the file does not contain, so results cannot currently be expressed in millimetres.</p></div>
+    <div class="q"><p><b>Is there a field or geometry dataset as well?</b> The brief offers training data on request, and a field dataset would reopen the physics-informed track the brief names. It is worth one email to find out.</p></div>
+    <div class="q"><p><b>What are the units of t_art1 and the line-width deviations?</b> Needed before any tolerance conclusion can be handed to a manufacturing engineer.</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>Benchmarks run on the supplied file with design-level splits over five seeds. Scripts, cached tensors and raw result files are in the project research folder. Timings are from a laptop with an NVIDIA RTX A1000 and a 20-core CPU, and should be restated on whatever hardware the final results are produced on.</p>
+</footer>
+
+</div>

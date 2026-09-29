@@ -1,0 +1,2817 @@
+{
+ "base": 0.448,
+ "single_halving_gain": {
+  "$DK": 0.00874999999999998,
+  "$R0402_1": 0.0006249999999999867,
+  "$R0402_2": 0.0003750000000000142,
+  "$R0402_RL": -0.0005000000000000004,
+  "TOL_LW_A1": 0.00024999999999997247,
+  "TOL_LW_A3": 0.09100000000000003,
+  "TOL_LW_A5": 0.00012499999999998623,
+  "TOL_LW_A7": 0.10012499999999996,
+  "TOL_LW_A9": 0.0022499999999999742,
+  "TOL_h": 0.02562500000000001,
+  "t_art1": 0.0
+ },
+ "rows": [
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 0.0,
+   "pass_rate": 0.448
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 1.0,
+   "pass_rate": 0.548125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 1.0,
+   "pass_rate": 0.539
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 1.0,
+   "pass_rate": 0.473625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 1.0,
+   "pass_rate": 0.45675
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 1.0,
+   "pass_rate": 0.45025
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.681875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.625625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.6025
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.558625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.551375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.549375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.541
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.47325
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.473125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.45775
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.827625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.697125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.685125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.62575
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.624625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.603875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.603625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.58275
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.579625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.559375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.55325
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.479875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.47275
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.459875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.45025
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.828375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.828
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.710625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.7095
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.69925
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.698
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.652
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.647625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.625625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.615875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.604
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.596
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.590625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.582875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.5795
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.560875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.553375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.549625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.540375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.47975
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.478875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.474375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.47325
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.46075
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.457875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.899375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.884375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.86425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.83
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.72275
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.721875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.71225
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.711625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.701125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.700375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.699875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.686375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.654875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.654
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.649125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.648375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.626
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.62325
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.61625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.616
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.604
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.603375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.596
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.5915
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.559625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.55925
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.55525
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.55275
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.479875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.474
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.472625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.900375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.89925
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.88475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.88425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.86425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.86375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.8295
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.828625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.74675
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.724125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.72375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.715875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.703375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.70175
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.69825
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.668125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.655625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.648125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.62475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.62475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.617125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.60425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.603
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.595625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.593125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.58325
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.58025
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.4805
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.479
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.4615
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.97425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.930125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.918
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.899625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.88575
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.863375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.831
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.83025
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.748375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.74775
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.726625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.72525
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.724875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.716375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.713125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.712125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.7025
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.70025
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.669125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.6675
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.656
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.654375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.6495
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.64825
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.617
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.61575
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.59725
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.5965
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.5955
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.5925
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.560625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.556
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.479125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.478
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.47375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.97475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.973875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.931875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.928875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.91775
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.916625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.900875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.89875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.885
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.884375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.86475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.8635
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.748375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.727125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.726125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.72575
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.724375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.72425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.704875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.702375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.701375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.66925
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.656625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.656375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.648125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.648125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.6245
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.616
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.615875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.602875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.99325
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.974125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.93025
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.916625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.9005
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.899125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.8865
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.88575
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.863625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.86325
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.831625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.74875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.747875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.727625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.7165
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.668125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.668
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.597875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.596125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.479125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.993375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.993
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.974625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.974
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.932625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.92825
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.919
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.916125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.749375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.748375
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.72725
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.726875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.726625
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.724875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.70475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.66925
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.668875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.65625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.6475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.615625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.5
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.992875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.9745
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.97425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.931125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.929875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.916875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.9165
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.89975
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.886875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 11.0,
+   "pass_rate": 0.863375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 1.0
+   },
+   "extra_cost": 12.0,
+   "pass_rate": 0.99325
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.25
+   },
+   "extra_cost": 12.0,
+   "pass_rate": 0.993
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 12.0,
+   "pass_rate": 0.749875
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 12.0,
+   "pass_rate": 0.727
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 12.0,
+   "pass_rate": 0.6695
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.5
+   },
+   "extra_cost": 13.0,
+   "pass_rate": 0.992875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 0.25
+   },
+   "extra_cost": 13.0,
+   "pass_rate": 0.99275
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 13.0,
+   "pass_rate": 0.974125
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 13.0,
+   "pass_rate": 0.930875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 13.0,
+   "pass_rate": 0.916375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.25,
+    "$DK": 0.25
+   },
+   "extra_cost": 15.0,
+   "pass_rate": 0.992625
+  }
+ ],
+ "front": [
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 1.0,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 0.0,
+   "pass_rate": 0.448
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 1.0,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 1.0,
+   "pass_rate": 0.548125
+  },
+  {
+   "scales": {
+    "TOL_h": 1.0,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 2.0,
+   "pass_rate": 0.681875
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 3.0,
+   "pass_rate": 0.827625
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.5,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 4.0,
+   "pass_rate": 0.828375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 5.0,
+   "pass_rate": 0.899375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.5,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 6.0,
+   "pass_rate": 0.900375
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 7.0,
+   "pass_rate": 0.97425
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.5,
+    "TOL_LW_A9": 1.0,
+    "$DK": 0.5
+   },
+   "extra_cost": 8.0,
+   "pass_rate": 0.97475
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 1.0,
+    "$DK": 1.0
+   },
+   "extra_cost": 9.0,
+   "pass_rate": 0.99325
+  },
+  {
+   "scales": {
+    "TOL_h": 0.25,
+    "TOL_LW_A7": 0.25,
+    "TOL_LW_A3": 0.25,
+    "TOL_LW_A9": 0.5,
+    "$DK": 1.0
+   },
+   "extra_cost": 10.0,
+   "pass_rate": 0.993375
+  }
+ ],
+ "n_inner": 8000,
+ "n_evals": 1944000,
+ "grid_s": 197.92821311950684
+}

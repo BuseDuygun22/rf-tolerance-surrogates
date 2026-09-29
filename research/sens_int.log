@@ -1,0 +1,10 @@
+S11_max_dB  TOL_h      540-run 0.515  45-run 0.512  90% [0.384, 0.632]  covered=True
+S11_max_dB  TOL_LW_A7  540-run 0.377  45-run 0.377  90% [0.223, 0.436]  covered=True
+S11_max_dB  TOL_LW_A3  540-run 0.104  45-run 0.099  90% [0.023, 0.125]  covered=True
+S31_mean_dB TOL_LW_A7  540-run 0.538  45-run 0.548  90% [0.406, 0.608]  covered=True
+S31_mean_dB TOL_LW_A3  540-run 0.451  45-run 0.444  90% [0.365, 0.545]  covered=True
+S31_mean_dB TOL_h      540-run 0.009  45-run 0.005  90% [0.000, 0.017]  covered=True
+iso_max_dB  TOL_h      540-run 0.549  45-run 0.540  90% [0.375, 0.636]  covered=True
+iso_max_dB  $DK        540-run 0.224  45-run 0.232  90% [0.136, 0.285]  covered=True
+iso_max_dB  TOL_LW_A7  540-run 0.152  45-run 0.158  90% [0.036, 0.271]  covered=True
+saved

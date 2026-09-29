@@ -1,0 +1,16 @@
+fold done
+fold done
+fold done
+fold done
+fold done
+S11_max_dB {'coverage68': 0.6925925925925925, 'coverage90': 0.9055555555555556, 'coverage95': 0.95, 'mean_z2': 1.0131646938128354, 'mean_sd_dB': 0.09375450412196357, 'rmse_dB': 0.0939532911916514}
+S31_mean_dB {'coverage68': 0.7074074074074074, 'coverage90': 0.912962962962963, 'coverage95': 0.9574074074074074, 'mean_z2': 1.016471925175638, 'mean_sd_dB': 0.04250149463348525, 'rmse_dB': 0.04245621907359524}
+iso_max_dB {'coverage68': 0.7, 'coverage90': 0.9074074074074074, 'coverage95': 0.9555555555555556, 'mean_z2': 0.9973756683135697, 'mean_sd_dB': 0.0953602703944018, 'rmse_dB': 0.09519798518026286}
+pass prob mean 0.267 vs actual 0.272 vs hard 0.265; Brier soft 0.0442 hard 0.0704
+  p in [0.00,0.05) n=318  mean p 0.00  actual 0.01
+  p in [0.05,0.20) n= 47  mean p 0.12  actual 0.15
+  p in [0.20,0.40) n= 24  mean p 0.29  actual 0.25
+  p in [0.40,0.60) n= 24  mean p 0.51  actual 0.38
+  p in [0.60,0.80) n= 20  mean p 0.72  actual 0.75
+  p in [0.80,0.95) n= 18  mean p 0.87  actual 1.00
+  p in [0.95,1.00) n= 89  mean p 0.99  actual 1.00
